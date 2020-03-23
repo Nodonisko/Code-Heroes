@@ -5,16 +5,42 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+if (typeof navigator !== "undefined") {
+  require("@lottiefiles/lottie-player")
+}
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <SEO title="Code Heroes" />
+    <div className="header">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8">
+            <h1 className="site-title">
+              We are <br />
+              <span className="secondary-color">Code Heroes</span> <br />
+              of code and coffee
+            </h1>
+          </div>
+          <div className="col-md-4">
+            <lottie-player
+              src="https://assets4.lottiefiles.com/datafiles/79YVXEKLbyXqdNpBhLN2HNpIaf0riunhFmey8w9J/animation.json"
+              background="transparent"
+              speed="0.5"
+              loop
+              autoplay
+            />
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <p className="coming-soon">Our awesome website coming soon.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
