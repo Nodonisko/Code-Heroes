@@ -2,20 +2,22 @@
 @import ../../node_modules/bootstrap/scss/bootstrap-grid.scss
 @import ../../node_modules/bootstrap/scss/bootstrap-reboot.scss
 
+@import 'colors'
+
 $title-font-stack: 'Playfair Display', serif
 $font-stack: 'PT Sans', sans-serif
-$primary-color: #2B3D87
-$secondary-color: #FC732C
-
 body
   font: 100% $font-stack
-  color: $primary-color
+  @include color-assign(color, primary);
+  @include color-assign(background-color, background);
+
+
 
 h1, h2, h3, h4, h5, h6
   font-family: $title-font-stack
 
 .secondary-color
-  color: $secondary-color
+  @include color-assign(color, secondary);
 
 .header
   margin: 100px 0
