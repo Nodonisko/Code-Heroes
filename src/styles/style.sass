@@ -7,24 +7,53 @@
 $title-font-stack: 'Playfair Display', serif
 $font-stack: 'PT Sans', sans-serif
 body
-  font: 100% $font-stack
-  @include color-assign(color, primary);
-  @include color-assign(background-color, background);
-
-
+  font: 20px $font-stack
+  @include color-assign(color, primary)
+  @include color-assign(background-color, background)
 
 h1, h2, h3, h4, h5, h6
   font-family: $title-font-stack
+  font-weight: 900
+
+h1, h2
+  font-size: 80px
+  line-height: 107px
+  margin-top: 65px
+
+p
+  font: 20px $font-stack
+  @include color-assign(color, primary)
+  line-height: 26px
+  margin: 25px 0
+
+a
+  @include color-assign(color, secondary)
+  text-decoration: underline
+
+  &:hover
+    @include color-assign(color, secondary)
+    text-decoration: none
+
 
 .secondary-color
-  @include color-assign(color, secondary);
+  @include color-assign(color, secondary)
 
-.header
-  margin: 100px 0
+.link-button
+  @include color-assign(color, secondary)
+  font-family: $title-font-stack
+  font-size: 30px
+  line-height: 40px
+  text-decoration: underline
+  margin-top: 25px
+  display: block
 
 .site-title
-  font-size: 80px
+  margin: 112px 0 62px
 
-.coming-soon
-  margin: 100px 0
+.section
+  @include color-assign(border-bottom, section-border, '3px solid here')
+  padding-bottom: 63px
+
+.client-logo
   text-align: center
+  margin-top: 60px
