@@ -1,8 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Section from "../components/section"
 import Row from "../components/row"
@@ -18,33 +17,37 @@ if (typeof navigator !== "undefined") {
 const IndexPage = () => (
   <Layout>
     <SEO title="Code Heroes" />
-    <Section>
-      <Row>
-        <div className="col-12">
-          <h1 className="site-title">
-            We are <br />
-            <span className="secondary-color">Heroes of Code</span> <br />
-            and coffee
-          </h1>
-        </div>
-      </Row>
-      <Row>
-        <div className="col-12">
-          <p className="intro-description">
-            We are a team of web and mobile developers who love their work. Our
-            previous project was suddenly stopped because hospitality business
-            was heavily affected by COVID-19 and we decided to find new job as a
-            team because we believe we are more effective together than as a
-            single person.
-          </p>
-          <a href="#" className="link-button">
-            Read our story
-          </a>
-        </div>
-      </Row>
-    </Section>
-
-    <Section>
+    <div className="intro">
+      <Section noBorder>
+        <Row>
+          <div className="col-12">
+            <h1 className="site-title">
+              We are <br />
+              <span className="secondary-color">Code Heroes</span>
+            </h1>
+          </div>
+        </Row>
+        <Row>
+          <div className="col-12">
+            <p className="intro-description">
+              A team of <strong>six passionate developers</strong>, who just
+              love their work. Our contract was suddenly terminated because of
+              turbulent markets in March 2020. So we decided to pursue our dream
+              and start looking for new challenges together. We believe that we
+              are <strong>highly effective</strong> team with senior skills and
+              diverse abilites.
+              <br />
+              <br />
+              Let’s build something beautiful <strong>together</strong>.
+            </p>
+            <AnchorLink href="#skills" className="link-button">
+              Read our story
+            </AnchorLink>
+          </div>
+        </Row>
+      </Section>
+    </div>
+    <Section id="skills">
       <Row>
         <div className="col-12">
           <h2>More than fullstack</h2>
@@ -62,15 +65,16 @@ const IndexPage = () => (
           </p>
         </div>
       </Row>
-
       <Row>
-        <div className="col-12">
-          <h2>Our experience</h2>
+        <div className="col-12" id="clients">
+          <h2>Work experience</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-            consequat magna. Sed a massa diam. Sed vel pellentesque tortor.
-            Morbi magna lorem, imperdiet et mattis sed, ultricies et ligula. Ut
-            at ultricies lorem. Etiam augue justo.
+            During our career we all have experience with many of interesting
+            companies. From small startups which we built to huge corporations
+            with horde of contributors to the same codebase.
+            <br />
+            <br />
+            Click on each logo to find out whom we helped:
           </p>
         </div>
       </Row>
@@ -78,31 +82,36 @@ const IndexPage = () => (
       <Row className="align-items-center">
         <ClientLogo src={require("../images/clients/kiwi.png")} />
         <ClientLogo src={require("../images/clients/good-data.png")} />
+        <ClientLogo src={require("../images/clients/ncr.png")} />
         <ClientLogo src={require("../images/clients/hoppygo.png")} />
         <ClientLogo src={require("../images/clients/mallpay.png")} />
         <ClientLogo src={require("../images/clients/skoda.png")} />
-
+        <ClientLogo src={require("../images/clients/creative-dock.png")} />
         <ClientLogo src={require("../images/clients/ackee.png")} />
         <ClientLogo src={require("../images/clients/vodafone.png")} />
       </Row>
 
       <Row>
         <div className="col-12">
-          <a
-            href="#"
+          <AnchorLink
+            href="#members"
             className="link-button"
             style={{ marginTop: 60, marginBottom: 60 }}
           >
             Show our team
-          </a>
+          </AnchorLink>
         </div>
       </Row>
     </Section>
 
-    <Section>
+    <Section id="members">
       <Row>
         <div className="col-12">
           <h2 className="team-members-title">Team members</h2>
+          <p>
+            We are 5 senior javascript developers with focus on React and React
+            Native. Radek is our Project Manager.
+          </p>
         </div>
       </Row>
 
@@ -173,27 +182,46 @@ const IndexPage = () => (
 
       <Row>
         <div className="col-12">
-          <a href="#" className="link-button" style={{ marginTop: 60 }}>
-            Hire us
-          </a>
-        </div>
-      </Row>
-    </Section>
-
-    <Section>
-      <Row>
-        <div className="col-12">
-          <h2>Hire us</h2>
-          <a
-            href="mailto:hire@codehero.es"
+          <AnchorLink
+            href="#contact"
             className="link-button"
-            style={{ marginTop: 45 }}
+            style={{ marginTop: 60 }}
           >
-            hire@codehero.es
-          </a>
+            Hire us
+          </AnchorLink>
         </div>
       </Row>
     </Section>
+    <footer className="contact" id="contact">
+      <Section>
+        <Row>
+          <div className="col-12">
+            <h2>Contact</h2>
+            <a
+              href="mailto:hire@codehero.es"
+              className="link-button"
+              style={{ marginTop: 45 }}
+            >
+              hire@codehero.es
+            </a>
+          </div>
+        </Row>
+      </Section>
+      <Section className="footer-copy">
+        <Row>
+          <div className="col-md-4">
+            <div class="footer-left">2020</div>
+          </div>
+          <div className="col-md-8">
+            <div className=" footer-right">
+              Coded with{" "}
+              <img src={require("../images/heart.png")} alt="Heart" /> at home
+              during quarantine in coronavirus times
+            </div>
+          </div>
+        </Row>
+      </Section>
+    </footer>
   </Layout>
 )
 

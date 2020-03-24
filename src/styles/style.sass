@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display:wght@900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap')
 @import ../../node_modules/bootstrap/scss/bootstrap-grid.scss
 @import ../../node_modules/bootstrap/scss/bootstrap-reboot.scss
 
@@ -47,12 +47,22 @@ a
   margin-top: 25px
   display: block
 
+.intro
+  @include color-assign(border-bottom, section-border, '3px solid here')
+  background: url('../images/hero.png') 75vw bottom no-repeat
+
+  @include media-breakpoint-up(lg)
+    height: 100vh
+
 .site-title
   margin: 112px 0 40px
 
 .section
   @include color-assign(border-bottom, section-border, '3px solid here')
   padding-bottom: 63px
+
+  &.no-border
+    border-bottom: 0
 
 .client-logo
   text-align: center
@@ -121,3 +131,18 @@ a
           width: 20px
           margin-left: -20px
         
+.contact
+  @include color-assign(background, member-background)
+
+.footer-left 
+  background: url('../images/cc.png') left center no-repeat
+  padding-left: 35px
+  padding-top: 3px
+
+.footer-right
+  padding-top: 3px
+  text-align: right
+
+.footer-copy
+  @include color-assign(border-top, member-border, '3px solid here')
+  padding: 41px 0
