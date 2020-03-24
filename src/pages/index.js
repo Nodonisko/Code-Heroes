@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Section from "../components/section"
 import Row from "../components/row"
 import ClientLogo from "../components/clientLogo"
+import Member from "../components/member"
 
 // Dont forget to remove if we won't use it
 // Fix SSR
@@ -29,11 +30,12 @@ const IndexPage = () => (
       </Row>
       <Row>
         <div className="col-12">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-            consequat magna. Sed a massa diam. Sed vel pellentesque tortor.
-            Morbi magna lorem, imperdiet et mattis sed, ultricies et ligula. Ut
-            at ultricies lorem.
+          <p className="intro-description">
+            We are a team of web and mobile developers who love their work. Our
+            previous project was suddenly stopped because hospitality business
+            was heavily affected by COVID-19 and we decided to find new job as a
+            team because we believe we are more effective together than as a
+            single person.
           </p>
           <a href="#" className="link-button">
             Read our story
@@ -45,7 +47,7 @@ const IndexPage = () => (
     <Section>
       <Row>
         <div className="col-12">
-          <h2>What we do</h2>
+          <h2>More than fullstack</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
             consequat magna. Sed a massa diam. Sed vel pellentesque tortor.
@@ -86,7 +88,11 @@ const IndexPage = () => (
 
       <Row>
         <div className="col-12">
-          <a href="#" className="link-button" style={{ marginTop: 60 }}>
+          <a
+            href="#"
+            className="link-button"
+            style={{ marginTop: 60, marginBottom: 60 }}
+          >
             Show our team
           </a>
         </div>
@@ -96,8 +102,80 @@ const IndexPage = () => (
     <Section>
       <Row>
         <div className="col-12">
-          <h2>Team members</h2>
-          <p>TODO</p>
+          <h2 className="team-members-title">Team members</h2>
+        </div>
+      </Row>
+
+      <Row>
+        <Member
+          name="Jan <br />Václavík"
+          masterSkills={["Front-end dev + UX"]}
+          skills={["React", "React Native", "NodeJS", "UX"]}
+          prevWork={[
+            "Team lead at Kiwi.com",
+            "Senior dev at NCR",
+            "Co-founder at Ackee",
+          ]}
+        >
+          <a href="#">CV</a>
+        </Member>
+
+        <Member
+          name="Daniel <br />Suchý"
+          avatar={require("../images/avatars/daniel.jpg")}
+          masterSkills={["Software architecture + CI/CD"]}
+          skills={["React, React Native", "NodeJS", "UX"]}
+          prevWork={[
+            "Team lead at Kiwi.com",
+            "Senior dev at NCR",
+            "Co-founder at Ackee",
+          ]}
+        >
+          <a href="#">CV</a>
+        </Member>
+
+        <Member
+          name="Radek <br />Tydlačka"
+          masterSkills={["Soft skiller"]}
+          skills={["", ""]}
+          prevWork={["", "", ""]}
+        >
+          <a href="#">CV</a>
+        </Member>
+
+        <Member
+          name="Anna <br />Luláková"
+          masterSkills={["Soft skiller"]}
+          skills={["", ""]}
+          prevWork={["", "", ""]}
+        >
+          <a href="#">CV</a>
+        </Member>
+
+        <Member
+          name="Pavel <br />Zbytovský"
+          masterSkills={["Soft skiller"]}
+          skills={["", ""]}
+          prevWork={["", "", ""]}
+        >
+          <a href="#">CV</a>
+        </Member>
+
+        <Member
+          name="Daniel <br />Rys"
+          masterSkills={["Soft skiller"]}
+          skills={["", ""]}
+          prevWork={["", "", ""]}
+        >
+          <a href="#">CV</a>
+        </Member>
+      </Row>
+
+      <Row>
+        <div className="col-12">
+          <a href="#" className="link-button" style={{ marginTop: 60 }}>
+            Hire us
+          </a>
         </div>
       </Row>
     </Section>
@@ -105,8 +183,14 @@ const IndexPage = () => (
     <Section>
       <Row>
         <div className="col-12">
-          <h2>Contact</h2>
-          <p>TODO</p>
+          <h2>Hire us</h2>
+          <a
+            href="mailto:hire@codehero.es"
+            className="link-button"
+            style={{ marginTop: 45 }}
+          >
+            hire@codehero.es
+          </a>
         </div>
       </Row>
     </Section>
