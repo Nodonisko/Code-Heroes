@@ -1,10 +1,23 @@
 import React from "react"
+import Image from "./image"
 
-const Member = ({ name, masterSkills, skills, prevWork, avatar, children }) => (
+const Member = ({
+  name,
+  masterSkills,
+  skills,
+  prevWork,
+  avatar,
+  children,
+  scrollPosition,
+}) => (
   <div className="col-md-4">
     <div className="member">
       <div className="member-avatar">
-        <img src={avatar} alt={name.replace("<br />", "")} />
+        <Image
+          src={avatar}
+          alt={name.replace("<br />", "")}
+          scrollPosition={scrollPosition}
+        />
       </div>
       <h3 dangerouslySetInnerHTML={{ __html: name }} />
       <div className="member-desc">

@@ -1,5 +1,6 @@
 import React from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import { trackWindowScroll } from "react-lazy-load-image-component"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,7 +15,7 @@ if (typeof navigator !== "undefined") {
   require("@lottiefiles/lottie-player")
 }
 
-const IndexPage = () => (
+const IndexPage = ({ scrollPosition }) => (
   <Layout>
     <SEO title="Code Heroes" />
     <div className="intro">
@@ -80,15 +81,42 @@ const IndexPage = () => (
       </Row>
 
       <Row className="align-items-center">
-        <ClientLogo src={require("../images/clients/kiwi.png")} />
-        <ClientLogo src={require("../images/clients/good-data.png")} />
-        <ClientLogo src={require("../images/clients/ncr.png")} />
-        <ClientLogo src={require("../images/clients/hoppygo.png")} />
-        <ClientLogo src={require("../images/clients/mallpay.png")} />
-        <ClientLogo src={require("../images/clients/skoda.png")} />
-        <ClientLogo src={require("../images/clients/creative-dock.png")} />
-        <ClientLogo src={require("../images/clients/ackee.png")} />
-        <ClientLogo src={require("../images/clients/vodafone.png")} />
+        <ClientLogo
+          src={require("../images/clients/kiwi.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/good-data.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/ncr.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/hoppygo.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/mallpay.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/skoda.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/creative-dock.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/ackee.png")}
+          scrollPosition={scrollPosition}
+        />
+        <ClientLogo
+          src={require("../images/clients/vodafone.png")}
+          scrollPosition={scrollPosition}
+        />
       </Row>
 
       <Row>
@@ -125,6 +153,7 @@ const IndexPage = () => (
             "Senior dev at NCR",
             "Co-founder at Ackee",
           ]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -139,6 +168,7 @@ const IndexPage = () => (
             "Senior dev at NCR",
             "Co-founder at Ackee",
           ]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -148,6 +178,7 @@ const IndexPage = () => (
           masterSkills={["Soft skiller"]}
           skills={["", ""]}
           prevWork={["", "", ""]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -157,6 +188,7 @@ const IndexPage = () => (
           masterSkills={["Soft skiller"]}
           skills={["", ""]}
           prevWork={["", "", ""]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -166,6 +198,7 @@ const IndexPage = () => (
           masterSkills={["Soft skiller"]}
           skills={["", ""]}
           prevWork={["", "", ""]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -175,6 +208,7 @@ const IndexPage = () => (
           masterSkills={["Soft skiller"]}
           skills={["", ""]}
           prevWork={["", "", ""]}
+          scrollPosition={scrollPosition}
         >
           <a href="#">CV</a>
         </Member>
@@ -225,4 +259,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default trackWindowScroll(IndexPage)
