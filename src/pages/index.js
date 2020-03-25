@@ -84,7 +84,7 @@ const IndexPage = ({ scrollPosition }) => (
               we care about analysis, user experience and testing.
             </strong>{" "}
             We all use speak in <strong>Javascript</strong> and we use modern
-            technologies like
+            technologies like{" "}
             <strong>React, React Native, GraphQL, NodeJS.</strong> Our
             experience involves also making courses and lectures about
             Javascript-based topics.
@@ -191,82 +191,87 @@ const IndexPage = ({ scrollPosition }) => (
           <Member
             name="Jan Václavík"
             avatar={require("../images/avatars/honza.jpg")}
-            masterSkill="FrontEnd dev, UX"
+            masterSkill="Front–end, UX"
             secondarySkill="React + React Native"
-            skills={["React", "React Native", "NodeJS", "UX"]}
+            skills={[
+              "Worked at Kiwi.com, NCR",
+              "Co-founder of Ackee",
+              "16 years in development",
+            ]}
             links={[
-              { href: "#", title: "Curriculum Vitae" },
-              { href: "#", title: "LinkedIn" },
-              { href: "#", title: "Person Website" },
+              {
+                href: "https://www.linkedin.com/in/janvaclavik/",
+                title: "LinkedIn",
+              },
+              { href: "https://github.com/jvaclavik", title: "GitHub" },
             ]}
             scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
+          ></Member>
 
           <Member
             name="Daniel Suchý"
             avatar={require("../images/avatars/daniel.jpg")}
             masterSkill="SW Architect, CI/CD"
             secondarySkill="React + React Native"
-            skills={["React", "React Native", "NodeJS", "UX"]}
+            skills={[
+              "Worked at MALL Pay,  NCR",
+              "10 years in development",
+              "Open source contributor",
+            ]}
             links={[
-              { href: "#", title: "Curriculum Vitae" },
-              { href: "#", title: "LinkedIn" },
-              { href: "#", title: "Person Website" },
+              { href: "https://danielsuchy.cz/", title: "Personal website" },
+              { href: "https://github.com/Nodonisko", title: "GitHub" },
             ]}
             scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
-
-          <Member
-            name="Radek Tydlačka"
-            avatar={require("../images/avatars/radek.jpg")}
-            masterSkill="FrontEnd dev, UX"
-            secondarySkill="React + React Native"
-            skills={["React", "React Native", "NodeJS", "UX"]}
-            links={[
-              { href: "#", title: "Curriculum Vitae" },
-              { href: "#", title: "LinkedIn" },
-              { href: "#", title: "Person Website" },
-            ]}
-            scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
-
-          <Member
-            name="Anna Luláková"
-            avatar={require("../images/avatars/anicka.jpg")}
-            masterSkill="FrontEnd dev, UX"
-            secondarySkill="React + React Native"
-            skills={["React", "React Native", "NodeJS", "UX"]}
-            links={[
-              { href: "#", title: "Curriculum Vitae" },
-              { href: "#", title: "LinkedIn" },
-              { href: "#", title: "Person Website" },
-            ]}
-            scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
+          ></Member>
 
           <Member
             name="Pavel Zbytovský"
             avatar={require("../images/avatars/pavel.jpg")}
-            masterSkill="FrontEnd dev, UX"
+            masterSkill="Full-stack developer"
+            secondarySkill="React Native + NodeJS"
+            skills={[
+              "Worked at Kiwi.com, GoodData, NCR",
+              "15 years in development",
+              "OpenStreetMap enthusiast",
+            ]}
+            links={[{ href: "https://github.com/zbycz", title: "GitHub" }]}
+            scrollPosition={scrollPosition}
+          ></Member>
+
+          <Member
+            name="Radek Tydlačka"
+            avatar={require("../images/avatars/radek.jpg")}
+            masterSkill="Project manager, QA"
+            secondarySkill="Soft skills"
+            skills={[
+              "Worked at Trisbee, NCR",
+              "7 years of project leadership",
+              "Analytics and QA",
+            ]}
+            links={[
+              {
+                href: "https://www.linkedin.com/in/radektydlacka/",
+                title: "LinkedIn",
+              },
+              { href: "/static/CV_Tydlacka.pdf", title: "Curriculum vitæ" },
+            ]}
+            scrollPosition={scrollPosition}
+          ></Member>
+
+          <Member
+            name="Anna Luláková"
+            avatar={require("../images/avatars/anicka.jpg")}
+            masterSkill="UI and styling"
             secondarySkill="React + React Native"
-            skills={["React", "React Native", "NodeJS", "UX"]}
+            skills={["Coding and styling specialist", "Graphical thinking"]}
             links={[
               { href: "#", title: "Curriculum Vitae" },
               { href: "#", title: "LinkedIn" },
               { href: "#", title: "Person Website" },
             ]}
             scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
+          ></Member>
 
           <div className="col-md-4">
             <div className="more-devs-card">
