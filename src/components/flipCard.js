@@ -10,7 +10,7 @@ const FlipCard = ({ FrontSide, BackSide }) => {
   return (
     <div class={`flip-card ${flipped ? "flipped" : ""}`}>
       <div class="flip-card-inner">
-        <div class="flip-card-front" onClick={toggleFlip}>
+        <div class="flip-card-front">
           <FrontSide toggleFlip={toggleFlip} />
         </div>
         <div class="flip-card-back">

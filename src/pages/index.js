@@ -25,7 +25,9 @@ const IndexPage = ({ scrollPosition }) => (
           <div className="col-md-9">
             <h1 className="site-title">
               We are <br />
-              <span className="secondary-color">Code Heroes</span>
+              <span className="secondary-color">
+                Code Her<span className="shield">o</span>es
+              </span>
             </h1>
           </div>
           <div className="col-md-3 d-none d-md-block">

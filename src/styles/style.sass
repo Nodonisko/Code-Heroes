@@ -111,13 +111,25 @@ a
   margin-top: 50px
 
 $card-height: 487px
+$card-bottom-margin: 30px
 .member
     @include color-assign(background, member-background)
     padding: 23px
-    @include color-assign(border-bottom, background, '30px solid here')
+    @include color-assign(border-bottom-color, background)
+    border-bottom-width: $card-bottom-margin
+    border-bottom-style: solid
     display: flex
     flex-direction: column
     height: $card-height
+
+    .flip-hitslop
+      position: absolute
+      right: 0
+      bottom: $card-bottom-margin
+      height: 90px
+      width: 90px
+      background: transparent
+      cursor: pointer
 
     .member-avatar
       text-align: center
@@ -197,7 +209,9 @@ $card-height: 487px
   flex-direction: column
   justify-content: center
   text-align: center
-  @include color-assign(border-bottom, background, '30px solid here')
+  @include color-assign(border-bottom-color, background)
+  border-bottom-width: $card-bottom-margin
+  border-bottom-style: solid
 
   p
     color: #757575
