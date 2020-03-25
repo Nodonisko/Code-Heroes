@@ -112,6 +112,16 @@ a
 
 $card-height: 487px
 $card-bottom-margin: 30px
+
+.flip-hitslop
+  position: absolute
+  right: 0
+  bottom: $card-bottom-margin
+  height: 90px
+  width: 90px
+  background: transparent
+  cursor: pointer
+
 .member
     @include color-assign(background, member-background)
     padding: 23px
@@ -121,15 +131,6 @@ $card-bottom-margin: 30px
     display: flex
     flex-direction: column
     height: $card-height
-
-    .flip-hitslop
-      position: absolute
-      right: 0
-      bottom: $card-bottom-margin
-      height: 90px
-      width: 90px
-      background: transparent
-      cursor: pointer
 
     .member-avatar
       text-align: center
