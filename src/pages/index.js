@@ -304,7 +304,9 @@ const IndexPage = ({ scrollPosition }) => (
       <Section className="footer-copy">
         <Row>
           <div className="col-md-4">
-            <div class="footer-left">2020</div>
+            <div class="footer-left">
+              <a href="https://github.com/Nodonisko/Code-Heroes">2020</a>
+            </div>
           </div>
           <div className="col-md-8">
             <div className=" footer-right">Coded with 😷 during quarantine</div>

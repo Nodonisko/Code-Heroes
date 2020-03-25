@@ -70,7 +70,7 @@ a
   margin: 112px 0 40px
 
 .logo
-  margin-top: 125px
+  margin-top: 140px
   text-align: right
 
 .section
@@ -198,6 +198,10 @@ $card-height: 487px
   padding-left: 35px
   padding-top: 3px
 
+  a
+    @include color-assign(color, primary)
+    text-decoration: none
+
 .footer-right
   padding-top: 3px
   text-align: right
@@ -219,6 +223,10 @@ $card-height: 487px
     transition: transform 0.6s
     transform-style: preserve-3d
 
+    -moz-backface-visibility: hidden
+
+
+
   &.flipped .flip-card-inner
     transform: rotateY(180deg)
 
@@ -239,7 +247,7 @@ $card-height: 487px
 .bounce
   animation-iteration-count: infinite
   animation-duration: 1.5s
-  animation: bounce 3.6s ease infinite
+  animation: bounce 10s ease infinite
   transform-origin: 50% 50%
 
 @keyframes bounce
@@ -253,13 +261,13 @@ $card-height: 487px
     transform: translateY(0)
 
   22.22222%
-    transform: translateY(-15px)
+    transform: translateY(-7px)
 
   27.77778%
     transform: translateY(0)
 
   33.33333%
-    transform: translateY(-15px)
+    transform: translateY(-7px)
 
   44.44444%
     transform: translateY(0)
