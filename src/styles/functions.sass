@@ -1,0 +1,6 @@
+@function calculateFontSize($originalFontSize)
+  @return #{$originalFontSize * 0.8 / 16}rem
+
+@function calculateRem($originalFontSize, $metricValue)
+  $calculatedFontSize: $originalFontSize * 0.8
+  @return #{($metricValue / $originalFontSize) * ($calculatedFontSize) / 16}rem
