@@ -28,7 +28,7 @@ const IndexPage = ({ scrollPosition }) => (
               <span className="secondary-color">Code Heroes</span>
             </h1>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 d-none d-md-block">
             <div className="logo">
               <Image
                 src={require("../images/icon.svg")}
@@ -53,7 +53,7 @@ const IndexPage = ({ scrollPosition }) => (
           </div>
         </Row>
       </Section>
-      <div className="next-section-arrow">
+      <div className="next-section-arrow d-none d-md-block">
         <AnchorLink href="#skills">
           <Image
             src={require("../images/arrow-down-big.svg")}
@@ -66,18 +66,26 @@ const IndexPage = ({ scrollPosition }) => (
     <Section id="skills">
       <Row>
         <div className="col-12">
-          <h2>More than fullstack</h2>
+          <h2>What’s the difference</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-            consequat magna. Sed a massa diam. Sed vel pellentesque tortor.
-            Morbi magna lorem, imperdiet et mattis sed, ultricies et ligula. Ut
-            at ultricies lorem. Etiam augue justo, vestibulum ut neque vel,
-            imperdiet suscipit orci. Phasellus aliquet, mauris a viverra
-            feugiat, velit velit molestie neque, id tincidunt arcu odio et
-            felis. Praesent dignissim tristique magna, vitae interdum ipsum
-            pellentesque at. Fusce in nulla vitae lacus volutpat venenatis
-            rhoncus vitae elit. Donec lobortis in arcu ut elementum. FE + BE +
-            apps
+            Everyone in the team is an expert in his field but we still learn
+            from each other something new every day. We believe that we can make
+            a real difference to our customers in compare to the others. Our
+            power is in hard skills, effective cooperation and eagerness to
+            build something for better future. <br />
+            <br />
+            Our primary focus is{" "}
+            <strong>web and mobile app development.</strong> We are able to
+            deliver apps from scratch to real valuable product. During the
+            development{" "}
+            <strong>
+              we care about analysis, user experience and testing.
+            </strong>{" "}
+            We all use speak in <strong>Javascript</strong> and we use modern
+            technologies like
+            <strong>React, React Native, GraphQL, NodeJS.</strong> Our
+            experience involves also making courses and lectures about
+            Javascript-based topics.
           </p>
         </div>
       </Row>
@@ -102,7 +110,16 @@ const IndexPage = ({ scrollPosition }) => (
             <p>React Native</p>
           </div>
         </div>
+
+        <div className="col-md-4">
+          <div className="skill-box">
+            <h3>UI</h3>
+            <p>Figma, Sketch</p>
+          </div>
+        </div>
       </Row>
+    </Section>
+    <Section id="experience">
       <Row>
         <div className="col-12" id="clients">
           <h2>Work experience</h2>
@@ -154,18 +171,6 @@ const IndexPage = ({ scrollPosition }) => (
           src={require("../images/clients/vodafone.png")}
           scrollPosition={scrollPosition}
         />
-      </Row>
-
-      <Row>
-        <div className="col-12">
-          <AnchorLink
-            href="#members"
-            className="link-button"
-            style={{ marginTop: 60, marginBottom: 60 }}
-          >
-            Show our team
-          </AnchorLink>
-        </div>
       </Row>
     </Section>
 
@@ -261,40 +266,31 @@ const IndexPage = ({ scrollPosition }) => (
             <a href="#">CV</a>
           </Member>
 
-          <Member
-            name="Need more devs?"
-            avatar={require("../images/avatars/dragon.png")}
-            masterSkill="Contact us!"
-            skills={["We have more heroes as backup"]}
-            links={[{ href: "mailto:hire@codehero.es", title: "Contact us!" }]}
-            scrollPosition={scrollPosition}
-          >
-            <a href="#">CV</a>
-          </Member>
+          <div className="col-md-4">
+            <div className="more-devs-card">
+              <p>
+                Need more devs?<br></br>
+                No problem, <AnchorLink href="#contact">contact us!</AnchorLink>
+              </p>
+            </div>
+          </div>
         </Row>
       </div>
-
-      <Row>
-        <div className="col-12">
-          <AnchorLink
-            href="#contact"
-            className="link-button"
-            style={{ marginTop: 60 }}
-          >
-            Hire us
-          </AnchorLink>
-        </div>
-      </Row>
     </Section>
     <footer className="contact" id="contact">
       <Section noBorder>
         <Row>
           <div className="col-12">
             <h2>Contact</h2>
+            <p>
+              We are based mostly in Prague, Czech Republic, but{" "}
+              <strong>we cooperate remotely without problem.</strong>
+              <br></br>
+              You can reach us on following e-mail:
+            </p>
             <a
               href="mailto:hire@codehero.es"
-              className="link-button"
-              style={{ marginTop: 45 }}
+              className="link-button hire-button"
             >
               hire@codehero.es
             </a>
@@ -303,13 +299,12 @@ const IndexPage = ({ scrollPosition }) => (
       </Section>
       <Section className="footer-copy">
         <Row>
-          <div className="col-md-4">
+          <div className="col-12">
             <div class="footer-left">
-              <a href="https://github.com/Nodonisko/Code-Heroes">2020</a>
+              <a href="https://github.com/Nodonisko/Code-Heroes">
+                Coded with 😷 during quarantine 2020
+              </a>
             </div>
-          </div>
-          <div className="col-md-8">
-            <div className=" footer-right">Coded with 😷 during quarantine</div>
           </div>
         </Row>
       </Section>

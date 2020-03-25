@@ -53,7 +53,7 @@ a
   position: relative
 
   @include media-breakpoint-up(lg)
-    height: 100vh
+    min-height: 100vh
 
   .next-section-arrow
     text-align: center
@@ -189,9 +189,28 @@ $card-height: 487px
             background: url('../images/link.svg') center right no-repeat
             background-size: auto 100%
 
+.more-devs-card
+  height: $card-height
+  padding: 23px
+  @include color-assign(background, more-devs-background)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  @include color-assign(border-bottom, background, '30px solid here')
+
+  p
+    color: #757575
+
+  a
+    font-weight: bold
+
       
 .contact
   @include color-assign(background, member-background)
+
+  .hire-button
+    margin: 35px 0 60px
 
 .footer-left 
   background: url('../images/cc.png') left center no-repeat
@@ -201,10 +220,6 @@ $card-height: 487px
   a
     @include color-assign(color, primary)
     text-decoration: none
-
-.footer-right
-  padding-top: 3px
-  text-align: right
 
 .footer-copy
   @include color-assign(border-top, member-border, '3px solid here')
@@ -222,10 +237,7 @@ $card-height: 487px
     height: 100%
     transition: transform 0.6s
     transform-style: preserve-3d
-
     -moz-backface-visibility: hidden
-
-
 
   &.flipped .flip-card-inner
     transform: rotateY(180deg)
