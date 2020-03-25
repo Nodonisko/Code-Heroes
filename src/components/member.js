@@ -1,51 +1,60 @@
 import React from "react"
 import Image from "./image"
+import FlipCard from "./flipCard"
 
 const Member = ({
   name,
-  masterSkills,
+  masterSkill,
+  secondarySkill,
   skills,
-  prevWork,
   avatar,
-  children,
+  links,
   scrollPosition,
 }) => (
   <div className="col-md-4">
-    <div className="member">
-      <div className="member-avatar">
-        <Image
-          src={avatar}
-          alt={name.replace("<br />", "")}
-          scrollPosition={scrollPosition}
-        />
-      </div>
-      <h3 dangerouslySetInnerHTML={{ __html: name }} />
-      <div className="member-desc">
-        <strong>Master Skill</strong>
-        <ul>
-          {masterSkills.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="member-desc">
-        <strong>Skillset</strong>
-        <ul>
-          {skills.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="member-desc">
-        <strong>Previous work</strong>
-        <ul>
-          {prevWork.map((work) => (
-            <li key={work}>{work}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="member-links">{children}</div>
-    </div>
+    <FlipCard
+      FrontSide={() => (
+        <div className="member member-frontside">
+          <div className="member-avatar-container">
+            <div className="member-avatar">
+              <Image src={avatar} alt={name} scrollPosition={scrollPosition} />
+            </div>
+          </div>
+          <h3>{name}</h3>
+          <div className="member-desc">
+            {masterSkill} <br></br>
+            {secondarySkill}
+          </div>
+          <div className="flip-arrow" role="button">
+            <Image src={require("../images/arrow-right.svg")} alt="Flip card" />
+          </div>
+        </div>
+      )}
+      BackSide={({ toggleFlip }) => (
+        <div className="member member-backside">
+          <h3>{name}</h3>
+          {skills && (
+            <div className="member-desc">
+              <ul>
+                {skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div className="member-links">
+            {links.map(({ href, title }) => (
+              <a key={title} href={href}>
+                {title}
+              </a>
+            ))}
+          </div>
+          <div className="flip-arrow" role="button" onClick={toggleFlip}>
+            <Image src={require("../images/arrow-left.svg")} alt="Flip card" />
+          </div>
+        </div>
+      )}
+    />
   </div>
 )
 

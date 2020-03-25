@@ -8,6 +8,7 @@ import Section from "../components/section"
 import Row from "../components/row"
 import ClientLogo from "../components/clientLogo"
 import Member from "../components/member"
+import Image from "../components/image"
 
 // Dont forget to remove if we won't use it
 // Fix SSR
@@ -21,17 +22,25 @@ const IndexPage = ({ scrollPosition }) => (
     <div className="intro">
       <Section noBorder>
         <Row>
-          <div className="col-12">
+          <div className="col-md-9">
             <h1 className="site-title">
               We are <br />
               <span className="secondary-color">Code Heroes</span>
             </h1>
           </div>
+          <div className="col-md-3">
+            <div className="logo">
+              <Image
+                src={require("../images/icon.svg")}
+                alt="We are Code Heroes!"
+              />
+            </div>
+          </div>
         </Row>
         <Row>
           <div className="col-12">
             <p className="intro-description">
-              A team of <strong>six passionate developers</strong>, who just
+              A team of <strong>five passionate developers</strong>, who just
               love their work. Our contract was suddenly terminated because of
               turbulent markets in March 2020. So we decided to pursue our dream
               and start looking for new challenges together. We believe that we
@@ -41,12 +50,18 @@ const IndexPage = ({ scrollPosition }) => (
               <br />
               Let’s build something beautiful <strong>together</strong>.
             </p>
-            <AnchorLink href="#skills" className="link-button">
-              Read our story
-            </AnchorLink>
           </div>
         </Row>
       </Section>
+      <div className="next-section-arrow">
+        <AnchorLink href="#skills">
+          <Image
+            src={require("../images/arrow-down-big.svg")}
+            alt="Read more"
+            className="bounce"
+          />
+        </AnchorLink>
+      </div>
     </div>
     <Section id="skills">
       <Row>
@@ -64,6 +79,28 @@ const IndexPage = ({ scrollPosition }) => (
             rhoncus vitae elit. Donec lobortis in arcu ut elementum. FE + BE +
             apps
           </p>
+        </div>
+      </Row>
+      <Row>
+        <div className="col-md-4">
+          <div className="skill-box">
+            <h3>Frontend</h3>
+            <p>React / React Native Web</p>
+          </div>
+        </div>
+
+        <div className="col-md-4">
+          <div className="skill-box">
+            <h3>Backend</h3>
+            <p>GraphQL, nodeJS, next.js</p>
+          </div>
+        </div>
+
+        <div className="col-md-4">
+          <div className="skill-box">
+            <h3>Mobile apps</h3>
+            <p>React Native</p>
+          </div>
         </div>
       </Row>
       <Row>
@@ -142,77 +179,100 @@ const IndexPage = ({ scrollPosition }) => (
           </p>
         </div>
       </Row>
+      <div className="members-cards">
+        <Row>
+          <Member
+            name="Jan Václavík"
+            avatar={require("../images/avatars/honza.jpg")}
+            masterSkill="FrontEnd dev, UX"
+            secondarySkill="React + React Native"
+            skills={["React", "React Native", "NodeJS", "UX"]}
+            links={[
+              { href: "#", title: "Curriculum Vitae" },
+              { href: "#", title: "LinkedIn" },
+              { href: "#", title: "Person Website" },
+            ]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
 
-      <Row>
-        <Member
-          name="Jan <br />Václavík"
-          masterSkills={["Front-end dev + UX"]}
-          skills={["React", "React Native", "NodeJS", "UX"]}
-          prevWork={[
-            "Team lead at Kiwi.com",
-            "Senior dev at NCR",
-            "Co-founder at Ackee",
-          ]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
+          <Member
+            name="Daniel Suchý"
+            avatar={require("../images/avatars/daniel.jpg")}
+            masterSkill="SW Architect, CI/CD"
+            secondarySkill="React + React Native"
+            skills={["React", "React Native", "NodeJS", "UX"]}
+            links={[
+              { href: "#", title: "Curriculum Vitae" },
+              { href: "#", title: "LinkedIn" },
+              { href: "#", title: "Person Website" },
+            ]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
 
-        <Member
-          name="Daniel <br />Suchý"
-          avatar={require("../images/avatars/daniel.jpg")}
-          masterSkills={["Software architecture + CI/CD"]}
-          skills={["React, React Native", "NodeJS", "UX"]}
-          prevWork={[
-            "Team lead at Kiwi.com",
-            "Senior dev at NCR",
-            "Co-founder at Ackee",
-          ]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
+          <Member
+            name="Radek Tydlačka"
+            avatar={require("../images/avatars/radek.jpg")}
+            masterSkill="FrontEnd dev, UX"
+            secondarySkill="React + React Native"
+            skills={["React", "React Native", "NodeJS", "UX"]}
+            links={[
+              { href: "#", title: "Curriculum Vitae" },
+              { href: "#", title: "LinkedIn" },
+              { href: "#", title: "Person Website" },
+            ]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
 
-        <Member
-          name="Radek <br />Tydlačka"
-          masterSkills={["Soft skiller"]}
-          skills={["", ""]}
-          prevWork={["", "", ""]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
+          <Member
+            name="Anna Luláková"
+            avatar={require("../images/avatars/anicka.jpg")}
+            masterSkill="FrontEnd dev, UX"
+            secondarySkill="React + React Native"
+            skills={["React", "React Native", "NodeJS", "UX"]}
+            links={[
+              { href: "#", title: "Curriculum Vitae" },
+              { href: "#", title: "LinkedIn" },
+              { href: "#", title: "Person Website" },
+            ]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
 
-        <Member
-          name="Anna <br />Luláková"
-          masterSkills={["Soft skiller"]}
-          skills={["", ""]}
-          prevWork={["", "", ""]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
+          <Member
+            name="Pavel Zbytovský"
+            avatar={require("../images/avatars/pavel.jpg")}
+            masterSkill="FrontEnd dev, UX"
+            secondarySkill="React + React Native"
+            skills={["React", "React Native", "NodeJS", "UX"]}
+            links={[
+              { href: "#", title: "Curriculum Vitae" },
+              { href: "#", title: "LinkedIn" },
+              { href: "#", title: "Person Website" },
+            ]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
 
-        <Member
-          name="Pavel <br />Zbytovský"
-          masterSkills={["Soft skiller"]}
-          skills={["", ""]}
-          prevWork={["", "", ""]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
-
-        <Member
-          name="Daniel <br />Rys"
-          masterSkills={["Soft skiller"]}
-          skills={["", ""]}
-          prevWork={["", "", ""]}
-          scrollPosition={scrollPosition}
-        >
-          <a href="#">CV</a>
-        </Member>
-      </Row>
+          <Member
+            name="Need more devs?"
+            avatar={require("../images/avatars/dragon.png")}
+            masterSkill="Contact us!"
+            skills={["We have more heroes as backup"]}
+            links={[{ href: "mailto:hire@codehero.es", title: "Contact us!" }]}
+            scrollPosition={scrollPosition}
+          >
+            <a href="#">CV</a>
+          </Member>
+        </Row>
+      </div>
 
       <Row>
         <div className="col-12">
@@ -227,7 +287,7 @@ const IndexPage = ({ scrollPosition }) => (
       </Row>
     </Section>
     <footer className="contact" id="contact">
-      <Section>
+      <Section noBorder>
         <Row>
           <div className="col-12">
             <h2>Contact</h2>
@@ -247,11 +307,7 @@ const IndexPage = ({ scrollPosition }) => (
             <div class="footer-left">2020</div>
           </div>
           <div className="col-md-8">
-            <div className=" footer-right">
-              Coded with{" "}
-              <img src={require("../images/heart.png")} alt="Heart" /> at home
-              during quarantine in coronavirus times
-            </div>
+            <div className=" footer-right">Coded with 😷 during quarantine</div>
           </div>
         </Row>
       </Section>

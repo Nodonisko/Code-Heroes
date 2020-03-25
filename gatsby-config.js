@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Code Heroes`,
-    description: `We are heroes of code and coffee.`,
+    title: `We are Code Heroes`,
+    description: `A team of six passionate developers, who just love their work. Our contract was suddenly terminated because of turbulent markets in March 2020. So we decided to pursue our dream and start looking for new challenges together. We believe that we are highly effective team with senior skills and diverse abilites.`,
     author: `@code_heroes`,
   },
   plugins: [
@@ -21,10 +21,10 @@ module.exports = {
         name: `code-heroes`,
         short_name: `code-heroes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2B3D87`,
+        theme_color: `#FC732C`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
