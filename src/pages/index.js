@@ -9,6 +9,8 @@ import Row from "../components/row"
 import ClientLogo from "../components/clientLogo"
 import Member from "../components/member"
 import Image from "../components/image"
+import SkillBox from "../components/skillBox"
+import ShowBreakpoint from "../components/showBreakpoint"
 
 // Dont forget to remove if we won't use it
 // Fix SSR
@@ -18,6 +20,7 @@ if (typeof navigator !== "undefined") {
 
 const IndexPage = ({ scrollPosition }) => (
   <Layout>
+    <ShowBreakpoint />
     <SEO title="Code Heroes" />
     <div className="intro">
       <Section noBorder>
@@ -34,16 +37,19 @@ const IndexPage = ({ scrollPosition }) => (
         <Row>
           <div className="col-12">
             <p className="intro-description">
-              A team of <strong>passionate Javascript developers</strong>, who
-              just love their work. <br />
+              A team of <strong>passionate developers</strong>, who just love
+              their work.
               <br />
-              Our contract ended because of turbulent markets in March 2020. So
-              we decided to pursue our dream and start looking for new
+              <br />
+              Our previous contract was ended by turbulent markets in March
+              2020. So we decided to pursue our dream and start looking for new
               challenges together. We believe that we are{" "}
               <strong>highly effective</strong> team with{" "}
               <strong>senior skills</strong> and diverse abilites. <br />
               <br />
               Let’s build something beautiful <strong>together</strong>.
+              <br />
+              <br />
             </p>
           </div>
         </Row>
@@ -63,69 +69,46 @@ const IndexPage = ({ scrollPosition }) => (
         <div className="col-12">
           <h2>What’s the difference</h2>
           <p>
-            Everyone in the team is an expert in their field but we still learn
-            something new from each other every day. We believe that we can
-            offer a real difference to our customers. Our power lies in hard
-            skills, effective cooperation and eagerness to build something for a
-            better future.
+            Everyone on team is an expert in their field, but we are still eager
+            to learn something new every day. Our <strong>secret power</strong>{" "}
+            lies in combination of both – hard skills and soft skills. This way
+            we can offer a real difference to our customer. <br />
+            <br />
+            We develop complex apps for{" "}
+            <strong>web, mobile or multiplatform</strong>. Let us deliver your
+            project from scratch – robust architecture, suitable tech stack and
+            reliable CI/CD is all an essence of what we do. You may be assured
+            that analysis, user experience and testing are always our main
+            focus. We promise.
             <br />
             <br />
-            Our primary focus is <strong>web and mobile app development</strong>
-            . We are able to deliver apps from scratch to real valuable
-            products. During the development{" "}
-            <strong>we care about analysis, user experience and testing</strong>
-            . <br />
+            Languages of our choice are TypeScript, JavaScript and English. Our
+            favourite tech stack utilize React, React Native, GraphQL and
+            NodeJS. We also give talks and workshops on advanced topics.
             <br />
-            We all speak <strong>Javascript</strong> and{" "}
-            <strong>TypeScript</strong> and we use modern technologies like{" "}
-            <strong>React, React Native, GraphQL and NodeJS</strong>. We have
-            experience with coaching and organizing courses involving
-            Javascript-based topics.
+            <br />
           </p>
         </div>
       </Row>
-      <Row>
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>Web apps</h3>
-            <p>React / React Native Web, NextJS, Apollo, Relay Modern</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>Mobile apps</h3>
-            <p>React Native, Cordova</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>Backend</h3>
-            <p>NodeJS, GraphQL, REST</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>UI</h3>
-            <p>Figma, Sketch, Adobe Photoshop, Avocode, Zeplin</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>CI/CD</h3>
-            <p>Bitrise, CircleCI, MS App Center</p>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="skill-box">
-            <h3>Other skills</h3>
-            <p>Git, TypeScript, Redux</p>
-          </div>
-        </div>
+      <Row className="skill-box-row">
+        <SkillBox
+          title="Web apps"
+          content="React / React Native Web, NextJS, Apollo, Relay Modern"
+        />
+        <SkillBox
+          title="Mobile apps"
+          content="React Native – iOS/Android native modules"
+        />
+        <SkillBox title="Backend" content="NodeJS, GraphQL, REST, gRPC" />
+        <SkillBox
+          title="UX/Design"
+          content="Figma, Sketch, Photoshop, Avocode, Zeplin, inVision"
+        />
+        <SkillBox
+          title="CI/CD"
+          content="Bitrise, CircleCI, MS App Center, Github Actions, Gitlab pipelines"
+        />
+        <SkillBox title="Other skills" content="Git, TypeScript, Redux" />
       </Row>
     </Section>
     <Section id="experience">
@@ -133,12 +116,10 @@ const IndexPage = ({ scrollPosition }) => (
         <div className="col-12" id="clients">
           <h2>Work experience</h2>
           <p>
-            We have cooperated with many interesting companies and worked on
-            real-life products. <br />
-            <br />
-            From small prototypes and local startups to large corporate
-            environments, we were able to add value and deliver working
-            solutions.
+            As individuals or together, we have worked for many companies
+            solving different problems. From small startups to large corporate
+            environments, we learned valuable lessons. Given that comunication
+            is our most important skill, our shared knowledge will amaze you.
           </p>
         </div>
       </Row>
@@ -206,9 +187,9 @@ const IndexPage = ({ scrollPosition }) => (
         <div className="col-12">
           <h2 className="team-members-title">Team members</h2>
           <p>
-            We are four <strong>senior Javascript developers</strong> with focus
-            on <strong>React</strong> and <strong>React Native</strong>. Radek
-            is our Project Manager and Quality Engineer.
+            We are four senior developers. Radek is our PM and Quality Engineer.
+            In case you need more engineering power, feel free to ask for
+            options.
           </p>
         </div>
       </Row>
@@ -280,7 +261,7 @@ const IndexPage = ({ scrollPosition }) => (
                 href: "https://www.linkedin.com/in/radektydlacka/",
                 title: "LinkedIn",
               },
-              { href: "/static/CV_Tydlacka.pdf", title: "Curriculum vitæ" },
+              { href: "/CV_Tydlacka.pdf", title: "Curriculum vitæ" },
             ]}
             scrollPosition={scrollPosition}
           ></Member>
@@ -288,20 +269,18 @@ const IndexPage = ({ scrollPosition }) => (
           <Member
             name="Anna Luláková"
             avatar={require("../images/avatars/anicka.jpg")}
-            masterSkill="UI and styling"
+            masterSkill="UI, UX and styling"
             secondarySkill="React (+Native)"
             skills={[
               "Worked at NCR, U.plus, Accenture",
               "6 years in development",
-              "experience with testing",
+              "Graphical thinking, experience with testing",
             ]}
-            links={[
-              { href: "/static/CV_Lulakova.pdf", title: "Curriculum vitæ" },
-            ]}
+            links={[{ href: "/CV_Lulakova.pdf", title: "Curriculum vitæ" }]}
             scrollPosition={scrollPosition}
           ></Member>
 
-          <div className="col-md-4">
+          <div className="col-md-4 col-sm-6">
             <div className="more-devs-card">
               <p>
                 Need more devs?<br></br>
@@ -318,12 +297,11 @@ const IndexPage = ({ scrollPosition }) => (
           <div className="col-12">
             <h2>Contact</h2>
             <p>
-              We are based in Prague, Czech Republic. It doesn’t matter where
-              you are from because{" "}
-              <strong>we can seamlessly operate remotely</strong>.
+              We are based in Prague, Czech Republic – but internet is our
+              second home.<br></br>Remote cooperation is welcome.
               <br />
               <br />
-              Are you interested? Drop us a line at the following email:
+              Are you interested? Drop us a line:
             </p>
             <a
               href="mailto:get@codehero.es"

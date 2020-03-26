@@ -18,7 +18,7 @@ const Member = ({
   }
 
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 col-sm-6">
       <div style={{ position: "relative" }}>
         <FlipCard
           ref={cardRef}

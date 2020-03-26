@@ -6,10 +6,22 @@
 
 $title-font-stack: 'Playfair Display', serif
 $font-stack: 'PT Sans', sans-serif
+
+$titles-size: 60px
+$link-button-size: 25px
+$p-font-size: 20px
+
+  
+$p-line-height: 36px
+
 body
-  font: 20px $font-stack
+  font: $p-font-size $font-stack
+  line-height: $p-line-height
   @include color-assign(color, font-primary)
   @include color-assign(background-color, background)
+
+.container
+  max-width: 1000px
 
 h1, h2, h3, h4, h5, h6
   font-family: $title-font-stack
@@ -17,14 +29,28 @@ h1, h2, h3, h4, h5, h6
   @include color-assign(color, primary)
 
 h1, h2
-  font-size: 80px
+  font-size: $titles-size
   line-height: 107px
   margin-top: 65px
 
+  @include media-breakpoint-down(sm)
+    margin-top: 50px 
+    font-size: 45px
+    line-height: 71px
+
 p
-  font: 20px $font-stack
-  line-height: 26px
+  font: $p-font-size $font-stack
+  line-height: $p-line-height
   margin: 25px 0
+
+  @include media-breakpoint-down(md)
+    line-height: 35px
+
+  @include media-breakpoint-down(sm)
+    line-height: 34px
+
+  @include media-breakpoint-down(xs)
+    line-height: 33px
 
 a
   @include color-assign(color, secondary)
@@ -41,7 +67,7 @@ a
 .link-button
   @include color-assign(color, secondary)
   font-family: $title-font-stack
-  font-size: 30px
+  font-size: $link-button-size
   line-height: 40px
   text-decoration: underline
   margin-top: 25px
@@ -52,7 +78,7 @@ a
   background: url('../images/hero.png') 75vw bottom no-repeat
   position: relative
 
-  @include media-breakpoint-up(lg)
+  @include media-breakpoint-up(md)
     min-height: 100vh
 
   .next-section-arrow
@@ -67,17 +93,35 @@ a
 
 
 .site-title
-  margin: 112px 0 80px
-  line-height: 107px
+  margin: 112px 0 60px
+
+  @include media-breakpoint-down(sm)
+    margin: 50px 0
 
   .shield
     color: transparent
-    background: url('../images/shield-o.svg') 0 0 no-repeat
+    background: url('../images/shield-o.svg') center 0 no-repeat
     background-size: auto 100%
+    padding: 0 0.1%
+
+    @include media-breakpoint-down(xs)
+      padding: 0 0.2%
+
+.intro-description
+  font-size: 25px
+  line-height: 43px
+  margin: 0 0 60px
+  text-align: justify
+
+  @include media-breakpoint-down(md)
+    line-height: 42px
+
+  @include media-breakpoint-down(sm)
+    line-height: 40px
 
 .section
   @include color-assign(border-bottom, section-border, '3px solid here')
-  padding-bottom: 63px
+  padding-bottom: 80px
 
   &.no-border
     border-bottom: 0
@@ -86,26 +130,32 @@ a
   text-align: center
   margin-top: 60px
 
-.intro-description
-  font-size: 30px
-  line-height: 39px
-  margin: 0 0 60px
-  text-align: justify
+.skill-box-row
+  div[class^="col-"]
+    padding-top: 30px
 
 $skill-box-padding: 23px
 .skill-box
   @include color-assign(background, member-background)
   padding: $skill-box-padding
-  margin-top: 40px
+  height: 100%
 
   h3
     @include color-assign(color, secondary)
-    font-size: 40px
-    line-height: 30px
+    font-size: 30px
+    line-height: 40px
+
+    @include media-breakpoint-down(md)
+      line-height: 39px
+
+    @include media-breakpoint-down(sm)
+      line-height: 38px
+
+    @include media-breakpoint-down(xs)
+      line-height: 37px
 
   p
     @include color-assign(color, font-black)
-    min-height: 52px
     margin-bottom: 0
 
 
@@ -113,15 +163,18 @@ $skill-box-padding: 23px
   margin: 45px 0 36px
 
 .members-cards
-  margin-top: 50px
+  margin-top: 10px
 
-$card-height: 487px
+  div[class^="col-"]
+    padding-top: 30px
+
+
 $card-bottom-margin: 30px
 
 .flip-hitslop
   position: absolute
   right: 0
-  bottom: $card-bottom-margin
+  bottom: 0
   height: 90px
   width: 90px
   background: transparent
@@ -130,16 +183,16 @@ $card-bottom-margin: 30px
 .member
     @include color-assign(background, member-background)
     padding: 23px
-    @include color-assign(border-bottom-color, background)
-    border-bottom-width: $card-bottom-margin
-    border-bottom-style: solid
     display: flex
     flex-direction: column
-    height: $card-height
+    height: 100%
 
     .member-avatar
       text-align: center
       margin: 22px 0 45px
+
+      @include media-breakpoint-down(md)
+        margin: 10px 0 25px
 
       img
         object-fit: cover
@@ -211,16 +264,13 @@ $card-bottom-margin: 30px
             background-size: auto 100%
 
 .more-devs-card
-  height: $card-height
+  height: 100%
   padding: 23px
   @include color-assign(background, more-devs-background)
   display: flex
   flex-direction: column
   justify-content: center
   text-align: center
-  @include color-assign(border-bottom-color, background)
-  border-bottom-width: $card-bottom-margin
-  border-bottom-style: solid
 
   p
     color: #757575
@@ -234,7 +284,10 @@ $card-bottom-margin: 30px
   @include color-assign(color, font-black)
 
   .hire-button
-    margin: 35px 0 60px
+    margin: 35px 0 30px
+    
+    @include media-breakpoint-down(sm)
+      margin-bottom: 10px
 
 .footer-left 
   background: url('../images/cc.png') left center no-repeat
@@ -252,8 +305,11 @@ $card-bottom-margin: 30px
 .flip-card
   background-color: transparent
   width: 100%
-  height: $card-height
+  height: 487px
   perspective: 1000px
+
+  @include media-breakpoint-down(sm)
+    height: 430px
 
   .flip-card-inner
     position: relative
