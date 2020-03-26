@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `We are Code Heroes`,
-    description: `A team of six passionate developers, who just love their work. Our contract was suddenly terminated because of turbulent markets in March 2020. So we decided to pursue our dream and start looking for new challenges together. We believe that we are highly effective team with senior skills and diverse abilites.`,
+    description: `A team of passionate developers, who just love their work. Our previous contract was ended by turbulent markets in March 2020. So we decided to pursue our dream and start looking for new challenges together. We believe that we are highly effective team with senior skills and diverse abilities. Let’s build something beautiful together.`,
     author: `@code_heroes`,
   },
   plugins: [

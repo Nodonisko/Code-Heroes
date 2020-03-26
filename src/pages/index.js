@@ -299,8 +299,9 @@ const IndexPage = ({ scrollPosition }) => (
             <p>
               We are based in Prague, Czech Republic – but the internet is our
               second home.
+              <br />
+              Remote cooperation is a piece of cake.
             </p>
-            <p>Remote cooperation is a piece of cake.</p>
             <p>Are you interested? Drop us a line:</p>
             <a
               href="mailto:get@codehero.es"
