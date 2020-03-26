@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "./image"
 
-const ClientLogo = ({ src, scrollPosition }) => {
+const ClientLogo = (props) => {
   return (
     <div className="col-4">
       <div className="client-logo">
-        <Image src={src} alt="logo" scrollPosition={scrollPosition} />
+        <Image {...props} />
       </div>
     </div>
   )

@@ -12,14 +12,14 @@ class FlipCard extends React.Component {
   render() {
     const { flipped } = this.state
     const { FrontSide, BackSide } = this.props
-    console.log(this.props, this.state, this.toggleFlip)
+
     return (
-      <div class={`flip-card ${flipped ? "flipped" : ""}`}>
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
+      <div className={`flip-card ${flipped ? "flipped" : ""}`}>
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
             <FrontSide toggleFlip={this.toggleFlip} />
           </div>
-          <div class="flip-card-back">
+          <div className="flip-card-back">
             <BackSide toggleFlip={this.toggleFlip} />
           </div>
         </div>

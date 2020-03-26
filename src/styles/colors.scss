@@ -1,5 +1,7 @@
 $colors: (
   light: (
+    font-primary: #4a4a4a,
+    font-black: #111,
     primary: #2b3d87,
     secondary: #fc732c,
     background: #fff,
@@ -8,9 +10,10 @@ $colors: (
     member-backside-background: rgba(43, 61, 135, 0.14),
     member-border: rgba(43, 61, 135, 0.21),
     more-devs-background: rgba(43, 61, 135, 0.03),
-    black-font: #000,
   ),
   dark: (
+    font-primary: #4a4a4a,
+    font-black: #111,
     primary: #2b3d87,
     secondary: #fc732c,
     background: #fff,
@@ -19,7 +22,6 @@ $colors: (
     member-backside-background: rgba(43, 61, 135, 0.14),
     member-border: rgba(43, 61, 135, 0.21),
     more-devs-background: rgba(43, 61, 135, 0.03),
-    black-font: #000,
   ),
 );
 

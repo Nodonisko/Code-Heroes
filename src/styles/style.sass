@@ -8,12 +8,13 @@ $title-font-stack: 'Playfair Display', serif
 $font-stack: 'PT Sans', sans-serif
 body
   font: 20px $font-stack
-  @include color-assign(color, primary)
+  @include color-assign(color, font-primary)
   @include color-assign(background-color, background)
 
 h1, h2, h3, h4, h5, h6
   font-family: $title-font-stack
   font-weight: 900
+  @include color-assign(color, primary)
 
 h1, h2
   font-size: 80px
@@ -22,7 +23,6 @@ h1, h2
 
 p
   font: 20px $font-stack
-  @include color-assign(color, primary)
   line-height: 26px
   margin: 25px 0
 
@@ -67,11 +67,13 @@ a
 
 
 .site-title
-  margin: 112px 0 40px
+  margin: 112px 0 80px
+  line-height: 107px
 
-.logo
-  margin-top: 140px
-  text-align: right
+  .shield
+    color: transparent
+    background: url('../images/shield-o.svg') 0 0 no-repeat
+    background-size: auto 100%
 
 .section
   @include color-assign(border-bottom, section-border, '3px solid here')
@@ -90,9 +92,10 @@ a
   margin: 0 0 60px
   text-align: justify
 
+$skill-box-padding: 23px
 .skill-box
   @include color-assign(background, member-background)
-  padding: 23px
+  padding: $skill-box-padding
   margin-top: 40px
 
   h3
@@ -101,7 +104,9 @@ a
     line-height: 30px
 
   p
-    @include color-assign(color, black-font)
+    @include color-assign(color, font-black)
+    min-height: 52px
+    margin-bottom: 0
 
 
 .team-members-title 
@@ -160,7 +165,7 @@ $card-bottom-margin: 30px
       font-size: 20px
       line-height: 26px
       text-align: center
-      @include color-assign(color, black-font)
+      @include color-assign(color, font-black)
 
     ul
       margin: 0
@@ -168,7 +173,7 @@ $card-bottom-margin: 30px
       list-style: none
 
       li
-        @include color-assign(color, black-font)
+        @include color-assign(color, font-black)
         margin-bottom: 7px
 
       li::before 
@@ -226,6 +231,7 @@ $card-bottom-margin: 30px
       
 .contact
   @include color-assign(background, member-background)
+  @include color-assign(color, font-black)
 
   .hire-button
     margin: 35px 0 60px
@@ -236,7 +242,7 @@ $card-bottom-margin: 30px
   padding-top: 3px
 
   a
-    @include color-assign(color, primary)
+    @include color-assign(color, font-black)
     text-decoration: none
 
 .footer-copy
