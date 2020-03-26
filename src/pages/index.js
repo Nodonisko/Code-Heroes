@@ -12,11 +12,7 @@ import Image from "../components/image"
 import SkillBox from "../components/skillBox"
 import ShowBreakpoint from "../components/showBreakpoint"
 
-// Dont forget to remove if we won't use it
 // Fix SSR
-if (typeof navigator !== "undefined") {
-  require("@lottiefiles/lottie-player")
-}
 
 const IndexPage = ({ scrollPosition }) => (
   <Layout>
@@ -35,18 +31,19 @@ const IndexPage = ({ scrollPosition }) => (
           </div>
         </Row>
         <Row>
-          <div className="col-12">
-            <p className="intro-description">
+          <div className="col-12 intro-description">
+            <p>
               A team of <strong>passionate developers</strong>, who just love
               their work.
-              <br />
-              <br />
+            </p>
+            <p>
               Our previous contract was ended by turbulent markets in March
               2020. So we decided to pursue our dream and start looking for new
               challenges together. We believe that we are{" "}
               <strong>highly effective</strong> team with{" "}
-              <strong>senior skills</strong> and diverse abilites. <br />
-              <br />
+              <strong>senior skills</strong> and diverse abilites.
+            </p>
+            <p>
               Let’s build something beautiful <strong>together</strong>.
               <br />
               <br />
@@ -73,20 +70,19 @@ const IndexPage = ({ scrollPosition }) => (
             to learn something new every day. Our <strong>secret power</strong>{" "}
             lies in combination of both – hard skills and soft skills. This way
             we can offer a real difference to our customer. <br />
-            <br />
+          </p>
+          <p>
             We develop complex apps for{" "}
             <strong>web, mobile or multiplatform</strong>. Let us deliver your
             project from scratch – robust architecture, suitable tech stack and
             reliable CI/CD is all an essence of what we do. You may be assured
             that analysis, user experience and testing are always our main
             focus. We promise.
-            <br />
-            <br />
+          </p>
+          <p>
             Languages of our choice are TypeScript, JavaScript and English. Our
             favourite tech stack utilize React, React Native, GraphQL and
             NodeJS. We also give talks and workshops on advanced topics.
-            <br />
-            <br />
           </p>
         </div>
       </Row>
@@ -299,10 +295,8 @@ const IndexPage = ({ scrollPosition }) => (
             <p>
               We are based in Prague, Czech Republic – but internet is our
               second home.<br></br>Remote cooperation is welcome.
-              <br />
-              <br />
-              Are you interested? Drop us a line:
             </p>
+            <p> Are you interested? Drop us a line:</p>
             <a
               href="mailto:get@codehero.es"
               className="link-button hire-button"
