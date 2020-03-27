@@ -1,13 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 import "../styles/style.sass"
+import React from "react"
+import ShowBreakpoint from "./showBreakpoint"
 
 const Layout = ({ children }) => {
-  return children
+  return (
+    <>
+      <ShowBreakpoint />
+      {children}
+    </>
+  )
 }
 
 export default Layout

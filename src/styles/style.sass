@@ -392,5 +392,17 @@ $card-bottom-margin: 30px
 
   .spider
     position: absolute
-    right: 100px
+    right: 0px
     top: 0
+
+    lottie-player
+      width: 250px
+
+      @include media-breakpoint-down(md)
+        width: 200px
+
+      @include media-breakpoint-down(sm)
+        width: 150px
+
+      @include media-breakpoint-down(xs)
+        width: 100px
