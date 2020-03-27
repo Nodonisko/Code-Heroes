@@ -12,8 +12,6 @@ import Image from "../components/image"
 import SkillBox from "../components/skillBox"
 import ShowBreakpoint from "../components/showBreakpoint"
 
-// Fix SSR
-
 const IndexPage = ({ scrollPosition }) => (
   <Layout>
     <ShowBreakpoint />

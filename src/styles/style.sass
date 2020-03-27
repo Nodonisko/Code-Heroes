@@ -367,3 +367,30 @@ $card-bottom-margin: 30px
 
   100%
     transform: translateY(0)
+
+
+.page-404
+  @include color-assign(background, primary)
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: #fff
+
+  .container
+    max-width: 1260px
+
+  &-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  a
+    color: rgb(215,41,73)
+
+  .spider
+    position: absolute
+    right: 100px
+    top: 0
