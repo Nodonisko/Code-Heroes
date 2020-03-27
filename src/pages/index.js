@@ -235,13 +235,14 @@ const IndexPage = ({ scrollPosition }) => (
             masterSkill="Dev, UX"
             secondarySkill="React, React Native, NodeJS"
             skills={[
-              "Worked at Kiwi.com, GoodData, NCR",
-              "15 years in development",
+              "Worked at Kiwi.com, GoodData, NCR, …",
+              "15 years of experience",
               "OpenStreetMap enthusiast",
             ]}
             links={[
               { href: "https://cz.linkedin.com/in/zbycz", title: "LinkedIn" },
-              { href: "https://github.com/zbycz", title: "GitHub" },
+              { href: "https://zby.cz/cv-zbytovsky.pdf", title: "Curriculum vitæ" },
+              { href: "https://zby.cz/", title: "Personal website" },
             ]}
             scrollPosition={scrollPosition}
           ></Member>
