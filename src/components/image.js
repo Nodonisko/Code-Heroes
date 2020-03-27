@@ -13,7 +13,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
  */
 
 const Image = (props) => {
-  return <LazyLoadImage effect="opacity" {...props} />
+  return <LazyLoadImage threshold={300} effect="opacity" {...props} />
 }
 
 export default Image
