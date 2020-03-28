@@ -22,10 +22,11 @@ const IndexPage = ({ scrollPosition }) => {
       <div className="intro">
         <Section noBorder>
           <Row>
-            <div className="col-12">
+            <div className="col-12 intro-column">
+              <span class="site-banner">Hire us</span>
               <h1 className="site-title">
-                We are{" "}
-                <span className="secondary-color">
+                We are
+                <span className="site-title-name secondary-color">
                   Code Her<span className="shield">o</span>es
                 </span>
               </h1>

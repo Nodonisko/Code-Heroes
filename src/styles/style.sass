@@ -1,9 +1,9 @@
-// @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Raleway:wght@900&display=swap')
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Raleway:700,900&display=swap')
 @import ../../node_modules/bootstrap/scss/bootstrap-grid.scss
 @import ../../node_modules/bootstrap/scss/bootstrap-reboot.scss
 
 @import 'colors'
+@import 'metrics'
 
 $title-font-stack: 'Raleway', serif
 $font-stack: 'PT Sans', sans-serif
@@ -18,7 +18,7 @@ $p-line-height: 36px
 body
   font: $p-font-size $font-stack
   line-height: $p-line-height
-  @include color-assign(color, font-primary)
+  @include color-assign(color, font-dark)
   @include color-assign(background-color, background)
 
 .container
@@ -75,12 +75,11 @@ a
   display: block
 
 .intro
-  @include color-assign(border-bottom, section-border, '3px solid here')
-  background: url('../images/hero.png') 75vw bottom no-repeat
+  background: $hero-background
   position: relative
 
   @include media-breakpoint-up(md)
-    min-height: 100vh
+  min-height: 100vh
 
   .next-section-arrow
     text-align: center
@@ -91,13 +90,73 @@ a
 
     a
       padding: 50px
+  
+  &-column
+    position: relative
 
+  &-description 
+    p
+      @include color-assign(color, font-light)
+      font-size: 25px
+      line-height: 43px
+      margin: 0 0 20px
+      text-align: justify
 
+      @include media-breakpoint-down(md)
+        line-height: 42px
+
+      @include media-breakpoint-down(sm)
+        line-height: 40px
+
+    strong
+      @include color-assign(color, font-light-strong)
+
+.site-banner
+  @include color-assign(background-color, secondary)
+  @include color-assign(color, font-light-strong)
+  font-size: 20px
+  line-height: 1.15
+  width: $banner-width
+  height: $banner-height
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  font-weight: 900
+  font-family: $title-font-stack
+  position: relative
+
+  &::after
+    @include color-assign(border-top, secondary)
+    border-top-width: $banner-arrow
+    border-top-style: solid
+    border-left: $banner-width / 2 solid transparent
+    border-right: $banner-width / 2 solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    bottom: -$banner-arrow;
+    width: 0;
+  
 .site-title
-  margin: 112px 0 60px
+  @include color-assign(color, font-light-strong)
+  margin: 95px 0 123px
+  font-size: 60px
+  line-height: 1.17
+  font-weight: 700
 
-  @include media-breakpoint-down(sm)
-    margin: 50px 0
+  // @include media-breakpoint-down(sm)
+  // margin: 50px 0
+  // font-size: 80px
+  // font-weight: 900
+  
+  &-name
+    display: block
+    margin-top: 10
+    font-size: 80px
+    font-weight: 900
 
   .shield
     color: transparent
@@ -107,18 +166,6 @@ a
 
     @include media-breakpoint-down(xs)
       padding: 0 0.2%
-
-.intro-description p
-  font-size: 25px
-  line-height: 43px
-  margin: 0 0 20px
-  text-align: justify
-
-  @include media-breakpoint-down(md)
-    line-height: 42px
-
-  @include media-breakpoint-down(sm)
-    line-height: 40px
 
 .section
   @include color-assign(border-bottom, section-border, '3px solid here')
@@ -160,7 +207,7 @@ a
       line-height: 37px
 
   p
-    @include color-assign(color, font-black)
+    @include color-assign(color, font-dark)
     font-size: 17px
     margin-bottom: 0
     line-height: 22px
@@ -233,7 +280,7 @@ $card-bottom-margin: 30px
       font-size: 20px
       line-height: 26px
       text-align: center
-      @include color-assign(color, font-black)
+      @include color-assign(color, font-dark)
 
     ul
       margin: 0
@@ -241,7 +288,7 @@ $card-bottom-margin: 30px
       list-style: none
 
       li
-        @include color-assign(color, font-black)
+        @include color-assign(color, font-dark)
         margin-bottom: 7px
 
       li::before 
@@ -296,7 +343,7 @@ $card-bottom-margin: 30px
       
 .contact
   @include color-assign(background, member-background)
-  @include color-assign(color, font-black)
+  @include color-assign(color, font-dark)
 
   .hire-button
     margin: 35px 0 0px
@@ -310,7 +357,7 @@ $card-bottom-margin: 30px
   padding-top: 3px
 
   a
-    @include color-assign(color, font-black)
+    @include color-assign(color, font-dark)
     text-decoration: none
 
 .footer-copy

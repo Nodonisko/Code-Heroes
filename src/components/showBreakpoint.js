@@ -10,6 +10,7 @@ const ShowBreakpoint = () => {
         position: "fixed",
         left: 5,
         top: 0,
+        color: 'yellow'
       }}
     >
       <div className="d-block d-sm-none">XS</div>

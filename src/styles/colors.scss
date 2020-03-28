@@ -1,11 +1,11 @@
 $colors: (
   light: (
-    font-primary: #4a4a4a,
-    font-black: #111,
+    font-light-strong: rgb(255,255,255),
+    font-light: rgba(255,255,255,0.8),
+    font-dark: #111,
     primary: #2b3d87,
     secondary: #ff5c46,
     background: #fff,
-    hero: #080A2E,
     section-border: rgba(43, 61, 135, 0.07),
     member-background: rgba(43, 61, 135, 0.07),
     member-backside-background: rgba(43, 61, 135, 0.14),
@@ -13,12 +13,12 @@ $colors: (
     more-devs-background: rgba(43, 61, 135, 0.03),
   ),
   dark: (
-    font-primary: #4a4a4a,
-    font-black: #111,
+    font-light-strong: rgb(255,255,255),
+    font-light: rgba(255,255,255,0.8),
+    font-dark: #111,
     primary: #2b3d87,
     secondary: #ff5c46,
     background: #fff,
-    hero: #080A2E,
     section-border: rgba(43, 61, 135, 0.07),
     member-background: rgba(43, 61, 135, 0.07),
     member-backside-background: rgba(43, 61, 135, 0.14),
@@ -26,7 +26,7 @@ $colors: (
     more-devs-background: rgba(43, 61, 135, 0.03),
   ),
 );
-
+$hero-background:  #080A2E linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));
 $color-placeholder: "here";
 
 @function compose-color-variable($color-key) {
