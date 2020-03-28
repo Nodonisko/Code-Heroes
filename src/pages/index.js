@@ -10,6 +10,7 @@ import ClientLogo from "../components/clientLogo"
 import Member from "../components/member"
 import Image from "../components/image"
 import SkillBox from "../components/skillBox"
+import Stars from "../components/stars"
 import ShowBreakpoint from "../components/showBreakpoint"
 import useGoogleAnalytics from "../hooks/useGoogleAnalytics"
 
@@ -20,6 +21,7 @@ const IndexPage = ({ scrollPosition }) => {
     <Layout>
       <SEO title="Code Heroes" />
       <div className="intro">
+        <Stars />
         <Section noBorder>
           <Row>
             <div className="col-12 intro-column">
