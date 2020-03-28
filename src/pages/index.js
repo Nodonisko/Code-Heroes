@@ -93,23 +93,35 @@ const IndexPage = ({ scrollPosition }) => {
         </Row>
         <Row className="skill-box-row">
           <SkillBox
+            icon="web-apps"
             title="Web apps"
             content="React / React Native Web, NextJS, Apollo, Relay Modern"
           />
           <SkillBox
+            icon="mobile-apps"
             title="Mobile apps"
             content="React Native – iOS/Android native modules"
           />
-          <SkillBox title="Backend" content="NodeJS, GraphQL, REST, gRPC" />
           <SkillBox
+            icon="backend"
+            title="Backend"
+            content="NodeJS, GraphQL, REST, gRPC"
+          />
+          <SkillBox
+            icon="ux-design"
             title="UX/Design"
             content="Figma, Sketch, Photoshop, Avocode, Zeplin"
           />
           <SkillBox
+            icon="ci-cd"
             title="CI/CD"
             content="Bitrise, CircleCI, MS App Center, Github Actions, Gitlab pipelines"
           />
-          <SkillBox title="Other skills" content="Git, TypeScript, Redux" />
+          <SkillBox
+            icon="other-skills"
+            title="Other skills"
+            content="Git, TypeScript, Redux"
+          />
         </Row>
       </Section>
       <Section id="experience">

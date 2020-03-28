@@ -1,0 +1,10 @@
+<svg width="114" height="93" viewBox="0 0 114 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 83L39 93H74.0001L69.5 83H44Z" fill="white"/>
+<rect y="9" width="114" height="76" rx="3" fill="white"/>
+<rect x="5" y="14" width="104" height="66" rx="2" fill="#FFD3CD" stroke="#FF5C46" stroke-width="2"/>
+<path d="M50.5 80L47 89H66L62.5 80H50.5Z" fill="#FFD3CD" stroke="#FF5C46" stroke-width="2"/>
+<rect x="13" y="21" width="88" height="52" fill="white" stroke="#FF5C46" stroke-width="2"/>
+<circle cx="57.7389" cy="48.8043" r="16.2609" fill="#FF5C46"/>
+<path d="M49.9622 41.2294C50.3152 40.9861 52.3202 40.9861 58.0926 38.9065C63.9494 40.9861 65.9544 40.9861 66.223 41.2294V50.1879C66.223 53.2871 62.921 56.9294 58.0926 60.1163C53.2642 56.9294 49.9622 53.2871 49.9622 50.1879V41.2294Z" fill="white"/>
+<path d="M62 64.2308V66.3768L63.6432 64.9965L66.4551 62.6344L68.8465 67.4451L69.2599 68.2768L70.1198 67.9259L72.1305 67.1054L73.1507 66.6891L72.6377 65.7139L70.2703 61.2135L74.0769 60.9201L76.5787 60.7273L74.63 59.1465L63.63 50.2234L62 48.9012V51V64.2308Z" fill="#FF5C46" stroke="white" stroke-width="2"/>
+</svg>
