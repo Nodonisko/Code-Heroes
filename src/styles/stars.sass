@@ -1,21 +1,21 @@
 // n is number of stars required
-@function multiple-box-shadow ($n) 
+@function multiple-box-shadow ($n, $size) 
   $value: '#{random(2000)}px #{random(2000)}px #FFF'
   @for $i from 2 through $n
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$size/2}px rgba(255, 255, 255, #{random(80)/100})'
 
   @return unquote($value)
 
-$shadows-small:  multiple-box-shadow(700)
-$shadows-medium: multiple-box-shadow(200)
-$shadows-big:    multiple-box-shadow(100)
+$shadows-small:  multiple-box-shadow(500, 1)
+$shadows-medium: multiple-box-shadow(200, 3)
+$shadows-big:    multiple-box-shadow(50, 4)
 
 .stars1
   width: 1px
   height: 1px
   background: transparent
   box-shadow: $shadows-small
-  animation			: animStar 50s linear infinite
+  animation			: animStar 1100s linear infinite
     
   &:after
     content: " "
@@ -27,27 +27,11 @@ $shadows-big:    multiple-box-shadow(100)
     box-shadow: $shadows-small
     
 .stars2
-  width: 2px
-  height: 2px
-  background: transparent
-  box-shadow: $shadows-medium
-  animation			: animStar 100s linear infinite
-    
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 2px
-    height: 2px
-    background: transparent
-    box-shadow: $shadows-medium
-    
-.stars3
   width: 3px
   height: 3px
   background: transparent
-  box-shadow: $shadows-big
-  animation			: animStar 150s linear infinite
+  box-shadow: $shadows-medium
+  animation			: animStar 700s linear infinite
     
   &:after
     content: " "
@@ -55,6 +39,22 @@ $shadows-big:    multiple-box-shadow(100)
     top: 2000px
     width: 3px
     height: 3px
+    background: transparent
+    box-shadow: $shadows-medium
+    
+.stars3
+  width: 4px
+  height: 4px
+  background: transparent
+  box-shadow: $shadows-big
+  animation			: animStar 500s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 4px
+    height: 4px
     background: transparent
     box-shadow: $shadows-big
     
