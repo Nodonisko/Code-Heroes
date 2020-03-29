@@ -60,7 +60,7 @@ const Member = ({
               )}
               <div className="member-links">
                 {links.map(({ href, title }) => (
-                  <a key={title} href={href}>
+                  <a key={title} href={href} target="_blank">
                     {title}
                   </a>
                 ))}

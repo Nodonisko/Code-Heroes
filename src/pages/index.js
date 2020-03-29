@@ -25,7 +25,7 @@ const IndexPage = ({ scrollPosition }) => {
         <Section noBorder>
           <Row>
             <div className="col-12 intro-column">
-              <AnchorLink href="#skills" class="site-banner">
+              <AnchorLink href="#contact" class="site-banner">
                 Hire us
               </AnchorLink>
               <h1 className="site-title">
@@ -39,15 +39,12 @@ const IndexPage = ({ scrollPosition }) => {
           <Row>
             <div className="col-12 intro-description">
               <p>
-                A team of <strong>passionate Javascript developers</strong>, who
-                just love their work.
+                <strong>
+                  A team of javascript developers with web & mobile in our DNA.
+                </strong>
+                <br />
+                Hire us and make your next product successful!
               </p>
-              <p>
-                Do you want to make your next product truly successful? You will
-                need a highly effective team with <strong>web & mobile</strong>{" "}
-                in their DNA.
-              </p>
-              <p>And that’s how we can help.</p>
             </div>
           </Row>
         </Section>
@@ -55,11 +52,12 @@ const IndexPage = ({ scrollPosition }) => {
           <AnchorLink
             href="#skills"
             onClick={createGAEventHandler("Clicked intro scroll arrow")}
+            className="intro-arrow"
           >
             <Image
               src={require("../images/arrow-down-big.svg")}
               alt="Read more"
-              className="bounce"
+              className="beat"
             />
           </AnchorLink>
         </div>
@@ -324,11 +322,11 @@ const IndexPage = ({ scrollPosition }) => {
               </p>
               <p>Are you interested? Drop us a line:</p>
               <a
-                href="mailto:get@codehero.es"
+                href="mailto:hire@codehero.es"
                 className="link-button hire-button"
                 onClick={createGAEventHandler("Clicked email in Contact")}
               >
-                get@codehero.es
+                hire@codehero.es
               </a>
             </div>
           </Row>
