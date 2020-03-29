@@ -5,7 +5,7 @@ name: Deploy to Firebase Hosting
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -26,3 +26,7 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2.0.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
