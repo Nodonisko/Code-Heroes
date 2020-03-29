@@ -39,21 +39,15 @@ const IndexPage = ({ scrollPosition }) => {
           <Row>
             <div className="col-12 intro-description">
               <p>
-                A team of <strong>passionate developers</strong>, who just love
-                their work.
+                A team of <strong>passionate Javascript developers</strong>, who
+                just love their work.
               </p>
               <p>
-                Our previous contract was ended by turbulent markets in March
-                2020. So we decided to pursue our dream and start looking for
-                new challenges together. We believe that we are{" "}
-                <strong>highly effective</strong> team with{" "}
-                <strong>senior skills</strong> and diverse abilities.
+                Do you want to make your next product truly successful? You will
+                need a highly effective team with <strong>web & mobile</strong>{" "}
+                in their DNA.
               </p>
-              <p>
-                Let’s build something beautiful <strong>together</strong>.
-                <br />
-                <br />
-              </p>
+              <p>And that’s how we can help.</p>
             </div>
           </Row>
         </Section>
@@ -75,10 +69,12 @@ const IndexPage = ({ scrollPosition }) => {
           <div className="col-12">
             <h2>We speak JavaScript</h2>
             <p>
-              Everyone on the team is an expert in their field, but we are still
-              eager to learn something new every day. Our{" "}
-              <strong>secret power</strong> lies in the combination of both –
-              hard skills and soft skills. This way we can offer a real
+              During the years we have gained a lot of experience at number of
+              companies. And now our dream finally came true – we are looking
+              for new challenges together. Everyone on the team is an expert in
+              their field, but we are still eager to learn something new every
+              day. Our <strong>secret power</strong> lies in the combination of
+              both – hard skills and soft skills. This way we can offer a real
               difference to our customers.
             </p>
             <p>
@@ -137,8 +133,8 @@ const IndexPage = ({ scrollPosition }) => {
               As individuals or together, we have worked for many companies
               solving different problems. From small startups to large corporate
               environments, we learned valuable lessons. Given that
-              communication is our most important skill, our shared knowledge
-              will amaze you.
+              communication is our most important skill and we believe our
+              shared knowledge will amaze you.
             </p>
           </div>
         </Row>
@@ -206,9 +202,9 @@ const IndexPage = ({ scrollPosition }) => {
           <div className="col-12">
             <h2 className="team-members-title">Team members</h2>
             <p>
-              We are four senior developers. Radek is our PM and Quality
-              Engineer. In case you need more engineering power, feel free to
-              ask for options.
+              We are four senior developers. Radek is our Project Manager and
+              Quality Engineer. In case you need more engineering power, feel
+              free to ask for options.
             </p>
           </div>
         </Row>
@@ -324,9 +320,7 @@ const IndexPage = ({ scrollPosition }) => {
               <h2>Contact</h2>
               <p>
                 We are based in Prague, Czech Republic – but the internet is our
-                second home.
-                <br />
-                Remote cooperation is a piece of cake.
+                second home and remote cooperation is possible.
               </p>
               <p>Are you interested? Drop us a line:</p>
               <a
