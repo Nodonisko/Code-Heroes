@@ -11,6 +11,15 @@
             "value": "cache-control: public, max-age=31536000, immutable"
           }
         ]
+      },
+      {
+        "source": "static/*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "cache-control: public, max-age=31536000, immutable"
+          }
+        ]
       }
     ]
   }
