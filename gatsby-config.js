@@ -22,7 +22,7 @@ module.exports = {
         short_name: `code-heroes`,
         start_url: `/`,
         background_color: `#2B3D87`,
-        theme_color: `#FC732C`,
+        theme_color: `#FF5C46`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
