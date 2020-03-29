@@ -25,7 +25,9 @@ const IndexPage = ({ scrollPosition }) => {
         <Section noBorder>
           <Row>
             <div className="col-12 intro-column">
-              <span class="site-banner">Hire us</span>
+              <AnchorLink href="#skills" class="site-banner">
+                Hire us
+              </AnchorLink>
               <h1 className="site-title">
                 We are
                 <span className="site-title-name secondary-color">

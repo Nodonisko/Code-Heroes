@@ -115,11 +115,12 @@ a
 .site-banner
   @include color-assign(background-color, secondary)
   @include color-assign(color, font-light-strong)
+  
   font-size: 20px
-  line-height: 1.15
+  padding-top: 10px
   width: $banner-width
   height: $banner-height
-  top: -6px
+  top: -18px
   left: 0
   display: flex
   justify-content: center
@@ -127,6 +128,12 @@ a
   font-weight: 900
   font-family: $title-font-stack
   position: relative
+  text-decoration: none
+  transition: all 0.2s ease
+  &:hover
+    top: -8px
+    transition: all 0.2s ease
+    @include color-assign(color, font-light-strong)
 
   &::after
     @include color-assign(border-top, secondary)
