@@ -220,7 +220,7 @@ const IndexPage = ({ scrollPosition }) => {
               skills={[
                 "Worked at Kiwi.com, NCR",
                 "Co-founder of Ackee",
-                "16 years in development",
+                "16 years of experience",
               ]}
               links={[
                 {
@@ -239,7 +239,7 @@ const IndexPage = ({ scrollPosition }) => {
               secondarySkill="React, React Native"
               skills={[
                 "Worked at MALL Pay,  NCR",
-                "10 years in development",
+                "10 years of experience",
                 "Open source contributor",
               ]}
               links={[
@@ -255,12 +255,11 @@ const IndexPage = ({ scrollPosition }) => {
               masterSkill="Dev, UX"
               secondarySkill="React, React Native, NodeJS"
               skills={[
-                "Worked at Kiwi.com, GoodData, NCR, …",
+                "Worked at Kiwi.com, GoodData, NCR, etc.",
                 "15 years of experience",
                 "OpenStreetMap enthusiast",
               ]}
               links={[
-                { href: "https://cz.linkedin.com/in/zbycz", title: "LinkedIn" },
                 {
                   href: "https://zby.cz/cv-zbytovsky.pdf",
                   title: "Curriculum vitæ",
@@ -297,7 +296,7 @@ const IndexPage = ({ scrollPosition }) => {
               secondarySkill="React, React Native"
               skills={[
                 "Worked at NCR, U.plus, Accenture",
-                "6 years in development",
+                "6 years of experience",
                 "Graphical thinking, experience with testing",
               ]}
               links={[{ href: "/CV_Lulakova.pdf", title: "Curriculum vitæ" }]}
