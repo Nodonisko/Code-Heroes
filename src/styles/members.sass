@@ -1,0 +1,152 @@
+// team section
+.team-members-title 
+  margin: 45px 0 36px
+
+.members-cards
+  margin-top: 10px
+
+  div[class^="col-"]
+    padding-top: 30px
+
+
+$card-bottom-margin: 30px
+
+.flip-hitslop
+  position: absolute
+  right: 0
+  bottom: 0
+  height: 90px
+  width: 90px
+  background: transparent
+  cursor: pointer
+
+.member
+    @include color-assign(background, member-background)
+    padding: 23px
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    .member-avatar
+      text-align: center
+      margin: 22px 0 45px
+
+      @include media-breakpoint-down(md)
+        margin: 10px 0 25px
+
+      img
+        object-fit: cover
+        width: 170px
+        height: 170px
+        border-radius: 85px
+        @include color-assign(border, member-border, '7px solid here')
+
+    .flip-arrow
+      align-self: flex-end
+      margin-top: auto
+      cursor: pointer
+
+    h3
+      @include color-assign(color, secondary)
+      @include rfs($large-font-size)
+      margin-top: 0
+      text-align: center
+
+    .member-desc
+      @include color-assign(color, font-dark)
+      @include rfs($base-font-size)
+      margin: 20px 0
+      text-align: center
+
+    ul
+      margin: 0
+      padding-left: 20px
+      list-style: none
+
+      li
+        @include color-assign(color, font-dark)
+        margin-bottom: 7px
+
+      li::before 
+        content: "\2022"
+        @include color-assign(color, member-border)
+        font-weight: bold
+        display: inline-block
+        width: 20px
+        margin-left: -20px
+
+    &.member-backside
+      @include color-assign(background, member-backside-background)
+
+      h3
+        text-align: left
+
+      .member-desc
+        text-align: left
+
+      .member-links
+        margin-top: auto
+
+        a
+          display: block
+          margin-bottom: 7px
+          font-weight: bold
+
+          &::after
+            content: ""
+            height: 15px
+            width: 15px
+            display: inline-block
+            margin-left: 7px
+            background: url('../images/link.svg') center right no-repeat
+            background-size: auto 100%
+
+.more-devs-card
+  height: 100%
+  padding: 23px
+  @include color-assign(background, more-devs-background)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+
+  p
+    color: #757575
+
+  a
+    font-weight: bold
+
+
+.flip-card
+  background-color: transparent
+  width: 100%
+  height: 487px
+  perspective: 1000px
+
+  @include media-breakpoint-down(sm)
+    height: 430px
+
+  .flip-card-inner
+    position: relative
+    width: 100%
+    height: 100%
+    transition: transform 0.6s
+    transform-style: preserve-3d
+    -moz-backface-visibility: hidden
+
+  &.flipped .flip-card-inner
+    transform: rotateY(180deg)
+
+  .flip-card-front, .flip-card-back
+    position: absolute
+    width: 100%
+    height: 100%
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+  .flip-card-front
+    color-assign(background, member-background)
+
+  .flip-card-back
+    color-assign(background, member-background)
+    transform: rotateY(180deg)

@@ -23,32 +23,28 @@ const IndexPage = ({ scrollPosition }) => {
       <div className="intro">
         <Stars />
         <Section noBorder>
-          <Row>
-            <div className="col-12 intro-column">
-              <AnchorLink href="#contact" class="site-banner">
-                Hire us
-              </AnchorLink>
-              <h1 className="site-title">
-                We are
-                <span className="site-title-name secondary-color">
-                  Code Her<span className="shield">o</span>es
-                </span>
-              </h1>
-            </div>
-          </Row>
-          <Row>
-            <div className="col-12 intro-description">
-              <p>
-                <strong>
-                  A team of javascript developers with web & mobile in our DNA.
-                </strong>
-                <br />
-                Hire us and make your next product successful!
-              </p>
-            </div>
-          </Row>
+          <div className="intro__column">
+            <AnchorLink href="#contact" class="intro__banner">
+              Hire us
+            </AnchorLink>
+            <h1 className="intro__title">
+              We are
+              <span className="intro__title-name secondary-color">
+                Code Her<span className="intro__title-shield">o</span>es
+              </span>
+            </h1>
+          </div>
+          <div className="intro__description">
+            <p>
+              <strong>
+                A team of javascript developers with web&nbsp;&&nbsp;mobile in our DNA.
+              </strong>
+              <br />
+              Hire us and make your next product successful!
+            </p>
+          </div>
         </Section>
-        <div className="next-section-arrow d-none d-md-block">
+        <div className="intro__arrow d-none d-md-block">
           <AnchorLink
             href="#skills"
             onClick={createGAEventHandler("Clicked intro scroll arrow")}
@@ -63,34 +59,30 @@ const IndexPage = ({ scrollPosition }) => {
         </div>
       </div>
       <Section id="skills">
-        <Row>
-          <div className="col-12">
-            <h2>We speak JavaScript</h2>
-            <p>
-              During the years we have gained a lot of experience at number of
-              companies. And now our dream finally came true – we are looking
-              for new challenges together. Everyone on the team is an expert in
-              their field, but we are still eager to learn something new every
-              day. Our <strong>secret power</strong> lies in the combination of
-              both – hard skills and soft skills. This way we can offer a real
-              difference to our customers.
-            </p>
-            <p>
-              We develop complex apps for{" "}
-              <strong>web, mobile or multi-platform</strong>. Let us deliver
-              your project from scratch – robust architecture, suitable tech
-              stack and reliable CI/CD is all an essence of what we do. You may
-              be assured that analysis, user experience, and testing are always
-              our main focus. We promise.
-            </p>
-            <p>
-              Languages of our choice are TypeScript, JavaScript and English.
-              Our favorite tech stack utilizes React, React Native, GraphQL and
-              NodeJS. We also give talks and workshops on advanced topics.
-            </p>
-          </div>
-        </Row>
-        <Row className="skill-box-row">
+        <h2>We speak JavaScript</h2>
+        <p>
+          During the years we have gained a lot of experience at number of
+          companies. And now our dream finally came true – we are looking for
+          new challenges together. Everyone on the team is an expert in their
+          field, but we are still eager to learn something new every day. Our{" "}
+          <strong>secret power</strong> lies in the combination of both – hard
+          skills and soft skills. This way we can offer a real difference to our
+          customers.
+        </p>
+        <p>
+          We develop complex apps for{" "}
+          <strong>web, mobile or multi-platform</strong>. Let us deliver your
+          project from scratch – robust architecture, suitable tech stack and
+          reliable CI/CD is all an essence of what we do. You may be assured
+          that analysis, user experience, and testing are always our main focus.
+          We promise.
+        </p>
+        <p>
+          Languages of our choice are TypeScript, JavaScript and English. Our
+          favorite tech stack utilizes React, React Native, GraphQL and NodeJS.
+          We also give talks and workshops on advanced topics.
+        </p>
+        <Row className="skills-wrapper">
           <SkillBox
             icon="web-apps"
             title="Web apps"
@@ -124,18 +116,14 @@ const IndexPage = ({ scrollPosition }) => {
         </Row>
       </Section>
       <Section id="experience">
-        <Row>
-          <div className="col-12" id="clients">
-            <h2>Work experience</h2>
-            <p>
-              As individuals or together, we have worked for many companies
-              solving different problems. From small startups to large corporate
-              environments, we learned valuable lessons. Given that
-              communication is our most important skill and we believe our
-              shared knowledge will amaze you.
-            </p>
-          </div>
-        </Row>
+        <h2>Work experience</h2>
+        <p>
+          As individuals or together, we have worked for many companies solving
+          different problems. From small startups to large corporate
+          environments, we learned valuable lessons. Given that communication is
+          our most important skill and we believe our shared knowledge will
+          amaze you.
+        </p>
 
         <Row className="align-items-center">
           <ClientLogo

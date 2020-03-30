@@ -5,54 +5,31 @@
 @import 'colors'
 @import 'metrics'
 @import 'stars'
-
-$title-font-stack: 'Raleway', serif
-$font-stack: 'PT Sans', sans-serif
-
-$titles-size: 60px
-$link-button-size: 25px
-$p-font-size: 20px
-
-  
-$p-line-height: 36px
+@import 'members'
+@import 'beat'
+@import '404'
 
 body
-  font: $p-font-size $font-stack
-  line-height: $p-line-height
   @include color-assign(color, font-dark)
   @include color-assign(background-color, background)
-
-.container
-  max-width: 1000px
+  @include rfs($base-font-size)
+  font-family: $font-stack
+  line-height: $base-line-height
 
 h1, h2, h3, h4, h5, h6
+  @include color-assign(color, primary)
   font-family: $title-font-stack
   font-weight: 900
-  @include color-assign(color, primary)
 
 h1, h2
-  font-size: $titles-size
-  line-height: 107px
-  margin-top: 65px
-
-  @include media-breakpoint-down(sm)
-    margin-top: 50px 
-    font-size: 45px
-    line-height: 71px
+  @include rfs($title-font-size)
+  margin-bottom: 30px
 
 p
-  font: $p-font-size $font-stack
-  line-height: $p-line-height
+  @include rfs($p-font-size)
+  font-family: $font-stack
+  line-height: $large-line-height
   margin: 15px 0
-
-  @include media-breakpoint-down(md)
-    line-height: 35px
-
-  @include media-breakpoint-down(sm)
-    line-height: 34px
-
-  @include media-breakpoint-down(xs)
-    line-height: 33px
 
 a
   @include color-assign(color, secondary)
@@ -62,139 +39,127 @@ a
     @include color-assign(color, secondary)
     text-decoration: none
 
+.container
+  max-width: 960px
+
+.section
+  @include color-assign(border-bottom, section-border, '3px solid here')
+  padding: 100px 0
+
+  &.no-border
+    border-bottom: 0
 
 .secondary-color
   @include color-assign(color, secondary)
 
 .link-button
   @include color-assign(color, secondary)
+  @include rfs($large-font-size)
+  display: inline-block
   font-family: $title-font-stack
-  font-size: $link-button-size
-  line-height: 40px
-  text-decoration: underline
+  line-height: $large-line-height
   margin-top: 25px
-  display: block
+  text-decoration: underline
 
+// intro section
 .intro
   background: $hero-background
   position: relative
 
   @include media-breakpoint-up(md)
-  min-height: 100vh
+    min-height: 100vh
 
-  .next-section-arrow
-    text-align: center
-    position: absolute
-    bottom: 0
-    width: 100%
-    padding-bottom: 65px
-    transform: scale(1)
-    transition: all 0.2s ease
-    &:hover
-      transform: translateY(20px)
-      transition: all 0.2s ease
-    a
-      padding: 50px
-      
-  
-  &-column
+  .section
+    padding-top: 0
+
+  &__column
     position: relative
 
-  &-description 
+  &__banner
+    @include color-assign(background-color, secondary)
+    @include color-assign(color, font-light-strong)
+    @include rfs($p-font-size)
+    align-items: center
+    font-family: $title-font-stack
+    font-weight: 900
+    display: flex
+    height: $banner-height
+    justify-content: center
+    left: 0
+    padding-top: $offset
+    position: relative
+    text-decoration: none
+    top: -2 * $offset
+    transition: all 0.2s ease
+    width: $banner-width
+
+    &:hover
+      @include color-assign(color, font-light-strong)
+      top: -$offset
+      transition: all 0.2s ease
+
+    &::after
+      @include color-assign(border-top, secondary)
+      border-left: $banner-width / 2 solid transparent
+      border-right: $banner-width / 2 solid transparent
+      border-top-style: solid
+      border-top-width: $banner-arrow
+      bottom: -$banner-arrow
+      content: ""
+      height: 0
+      left: 0
+      position: absolute
+      width: 0
+
+  &__title
+    @include color-assign(color, font-light-strong)
+    font-weight: 700
+    margin: 120px 0 60px
+
+    &-name
+      @include rfs($title-name-font-size)
+      display: block
+      font-weight: 900
+      margin-top: 10px
+
+    &-shield
+      color: transparent
+      background: url('../images/shield-o.svg') center 0 no-repeat
+      background-size: auto 100%
+      padding: 0 0.1%
+
+      @include media-breakpoint-down(xs)
+        padding: 0 0.2%
+
+  &__description
     p
       @include color-assign(color, font-light)
-      font-size: 25px
-      line-height: 43px
-      margin: 0 0 20px
-      text-align: justify
-
-      @include media-breakpoint-down(md)
-        line-height: 42px
-
-      @include media-breakpoint-down(sm)
-        line-height: 40px
+      @include rfs($large-font-size)
 
     strong
       @include color-assign(color, font-light-strong)
 
-.site-banner
-  @include color-assign(background-color, secondary)
-  @include color-assign(color, font-light-strong)
-  
-  font-size: 20px
-  padding-top: 10px
-  width: $banner-width
-  height: $banner-height
-  top: -18px
-  left: 0
-  display: flex
-  justify-content: center
-  align-items: center
-  font-weight: 900
-  font-family: $title-font-stack
-  position: relative
-  text-decoration: none
-  transition: all 0.2s ease
-  &:hover
-    top: -8px
+  &__arrow
+    bottom: 0
+    padding-bottom: 65px
+    position: absolute
+    text-align: center
     transition: all 0.2s ease
-    @include color-assign(color, font-light-strong)
+    transform: scale(1)
+    width: 100%
 
-  &::after
-    @include color-assign(border-top, secondary)
-    border-top-width: $banner-arrow
-    border-top-style: solid
-    border-left: $banner-width / 2 solid transparent
-    border-right: $banner-width / 2 solid transparent;
-    content: "";
-    height: 0;
-    left: 0;
-    position: absolute;
-    bottom: -$banner-arrow;
-    width: 0;
-  
-.site-title
-  @include color-assign(color, font-light-strong)
-  margin: 95px 0 123px
-  font-size: 60px
-  line-height: 1.17
-  font-weight: 700
+    &:hover
+      transform: translateY(20px)
+      transition: all 0.2s ease
 
-  // @include media-breakpoint-down(sm)
-  // margin: 50px 0
-  // font-size: 80px
-  // font-weight: 900
-  
-  &-name
-    display: block
-    margin-top: 10
-    font-size: 80px
-    font-weight: 900
+    a
+      padding: 50px
 
-  .shield
-    color: transparent
-    background: url('../images/shield-o.svg') center 0 no-repeat
-    background-size: auto 100%
-    padding: 0 0.1%
-
-    @include media-breakpoint-down(xs)
-      padding: 0 0.2%
-
-.section
-  @include color-assign(border-bottom, section-border, '3px solid here')
-  padding-bottom: 80px
-
-  &.no-border
-    border-bottom: 0
-
-.client-logo
-  text-align: center
-  margin-top: 60px
-
-.skill-box-row
+// skills section
+.skills-wrapper
   div[class^="col-"]
     display: flex
-    padding-top: 74px
+    padding-top: 80px
 
 .skill-box
   @include color-assign(background, member-background)
@@ -205,166 +170,38 @@ a
   padding: 60px 30px 30px
   position: relative
 
-  h3
-    @include color-assign(color, secondary)
-    font-size: 30px
-    line-height: 40px
-
-    @include media-breakpoint-down(md)
-      line-height: 39px
-
-    @include media-breakpoint-down(sm)
-      line-height: 38px
-
-    @include media-breakpoint-down(xs)
-      line-height: 37px
-
-  p
-    @include color-assign(color, font-dark)
-    font-size: 17px
-    margin-bottom: 0
-    line-height: 22px
-    text-align: center
-
-  &-icon
+  &__icon
     left: 50%
     position: absolute
     top: 0
     transform: translateX(-50%) translateY(-50%)
 
+  &__title
+    @include color-assign(color, secondary)
+    @include rfs($large-font-size)
 
+  &__content
+    @include color-assign(color, font-dark)
+    @include rfs($base-font-size)
+    margin-bottom: 0
+    line-height: $base-line-height
+    text-align: center
 
-.team-members-title 
-  margin: 45px 0 36px
-
-.members-cards
-  margin-top: 10px
-
-  div[class^="col-"]
-    padding-top: 30px
-
-
-$card-bottom-margin: 30px
-
-.flip-hitslop
-  position: absolute
-  right: 0
-  bottom: 0
-  height: 90px
-  width: 90px
-  background: transparent
-  cursor: pointer
-
-.member
-    @include color-assign(background, member-background)
-    padding: 23px
-    display: flex
-    flex-direction: column
-    height: 100%
-
-    .member-avatar
-      text-align: center
-      margin: 22px 0 45px
-
-      @include media-breakpoint-down(md)
-        margin: 10px 0 25px
-
-      img
-        object-fit: cover
-        width: 170px
-        height: 170px
-        border-radius: 85px
-        @include color-assign(border, member-border, '7px solid here')
-
-    .flip-arrow
-      align-self: flex-end
-      margin-top: auto
-      cursor: pointer
-
-    h3
-      @include color-assign(color, secondary)
-      font-size: 30px
-      line-height: 40px
-      margin-top: 0
-      text-align: center
-
-    .member-desc
-      margin: 20px 0
-      font-size: 20px
-      line-height: 26px
-      text-align: center
-      @include color-assign(color, font-dark)
-
-    ul
-      margin: 0
-      padding-left: 20px
-      list-style: none
-
-      li
-        @include color-assign(color, font-dark)
-        margin-bottom: 7px
-
-      li::before 
-        content: "\2022"
-        @include color-assign(color, member-border)
-        font-weight: bold
-        display: inline-block
-        width: 20px
-        margin-left: -20px
-
-    &.member-backside
-      @include color-assign(background, member-backside-background)
-
-      h3
-        text-align: left
-
-      .member-desc
-        text-align: left
-
-      .member-links
-        margin-top: auto
-
-        a
-          display: block
-          margin-bottom: 7px
-          font-weight: bold
-
-          &::after
-            content: ""
-            height: 15px
-            width: 15px
-            display: inline-block
-            margin-left: 7px
-            background: url('../images/link.svg') center right no-repeat
-            background-size: auto 100%
-
-.more-devs-card
-  height: 100%
-  padding: 23px
-  @include color-assign(background, more-devs-background)
-  display: flex
-  flex-direction: column
-  justify-content: center
+// clients section
+.client-logo
   text-align: center
+  margin-top: 60px
 
-  p
-    color: #757575
-
-  a
-    font-weight: bold
-
-      
+// contact section    
 .contact
   @include color-assign(background, member-background)
   @include color-assign(color, font-dark)
 
   .hire-button
-    margin: 35px 0 0px
     display: inline-block
-    @include media-breakpoint-down(sm)
-      margin-bottom: 10px
+    margin: 35px 0 10px
 
-.footer-left 
+.footer-left
   background: url('../images/cc.png') left center no-repeat
   padding-left: 35px
   padding-top: 3px
@@ -376,102 +213,3 @@ $card-bottom-margin: 30px
 .footer-copy
   @include color-assign(border-top, member-border, '3px solid here')
   padding: 20px 0
-  
-
-.flip-card
-  background-color: transparent
-  width: 100%
-  height: 487px
-  perspective: 1000px
-
-  @include media-breakpoint-down(sm)
-    height: 430px
-
-  .flip-card-inner
-    position: relative
-    width: 100%
-    height: 100%
-    transition: transform 0.6s
-    transform-style: preserve-3d
-    -moz-backface-visibility: hidden
-
-  &.flipped .flip-card-inner
-    transform: rotateY(180deg)
-
-  .flip-card-front, .flip-card-back
-    position: absolute
-    width: 100%
-    height: 100%
-    -webkit-backface-visibility: hidden
-    backface-visibility: hidden
-
-  .flip-card-front
-    color-assign(background, member-background)
-
-  .flip-card-back
-    color-assign(background, member-background)
-    transform: rotateY(180deg)
-
-
-.beat
-  animation-iteration-count: infinite
-  animation-duration: 1.5s
-  animation: beat 4s ease infinite
-  transform-origin: 50% 50%
-
-@keyframes beat
-  0%
-    transform: scale(1)
-  20%
-    transform: scale(1)
-  24%
-    transform: scale(1.1)
-  28%
-    transform: scale(1)
-  30%
-    transform: scale(1)
-  34%
-    transform: scale(1.15)
-  38%
-    transform: scale(1)
-  
-    
-
-
-.page-404
-  @include color-assign(background, primary)
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  color: #fff
-
-  .container
-    max-width: 1260px
-
-  &-content
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-
-  a
-    color: rgb(215,41,73)
-
-  .spider
-    position: absolute
-    right: 0px
-    top: 0
-
-    lottie-player
-      width: 250px
-
-      @include media-breakpoint-down(md)
-        width: 200px
-
-      @include media-breakpoint-down(sm)
-        width: 150px
-
-      @include media-breakpoint-down(xs)
-        width: 100px

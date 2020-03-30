@@ -1,0 +1,38 @@
+
+.page-404
+  @include color-assign(background, primary)
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: #fff
+
+  .container
+    max-width: 1260px
+
+  &-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  a
+    color: rgb(215,41,73)
+
+  .spider
+    position: absolute
+    right: 0px
+    top: 0
+
+    lottie-player
+      width: 250px
+
+      @include media-breakpoint-down(md)
+        width: 200px
+
+      @include media-breakpoint-down(sm)
+        width: 150px
+
+      @include media-breakpoint-down(xs)
+        width: 100px
