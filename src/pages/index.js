@@ -79,7 +79,7 @@ const IndexPage = ({ scrollPosition }) => {
           we want to build products which we can be proud of.
         </p>
         <p>
-          Languages of our choice are <strong>TypeScript</strong>, JavaScript
+          Our languages of choice are <strong>TypeScript</strong>, JavaScript
           and English. Our favorite tech stack utilizes React, React Native,
           GraphQL and NodeJS. We also give talks and workshops on advanced
           topics.
