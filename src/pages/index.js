@@ -62,25 +62,27 @@ const IndexPage = ({ scrollPosition }) => {
       <Section id="skills">
         <h2>We speak JavaScript</h2>
         <p>
-          Our dream finally came true – we are looking for new challenges
-          together as a team, not as individuals. We have gained a lot of
-          experience during our careers and everyone on the team is an expert in
-          his field. Our <strong>secret power</strong> lies in the combination
-          of both – hard skills and soft skills. This way we can offer a real
-          difference to our customers.
+          Working together as a team, we realized that we can be more effective,
+          and achieve incredible results for our clients. So instead of working
+          alone, we’re looking for new challenges together. We have gained a lot
+          of experience during our careers and every member of our team is an
+          expert in their respective field. Our <strong>secret power</strong>{" "}
+          lies in the combination of both – hard skills and soft skills. This
+          way we can offer a real difference to our customers.
         </p>
         <p>
           We develop complex apps for{" "}
           <strong>web, mobile or multi-platform</strong>. Let us deliver your
           project from scratch – robust architecture, suitable tech stack and
-          reliable CI/CD is all an essence of what we do. You may be assured
-          that analysis, user experience, and testing are always our main focus
-          and we want to build products which we can be proud of.
+          reliable CI/CD is an integral part what we do. You may be assured that
+          analysis, user experience, and testing are always our main focus and
+          we want to build products which we can be proud of.
         </p>
         <p>
-          Languages of our choice are <strong>TypeScript</strong> JavaScript and
-          English. Our favorite tech stack utilizes React, React Native, GraphQL
-          and NodeJS. We also give talks and workshops on advanced topics.
+          Languages of our choice are <strong>TypeScript</strong>, JavaScript
+          and English. Our favorite tech stack utilizes React, React Native,
+          GraphQL and NodeJS. We also give talks and workshops on advanced
+          topics.
         </p>
         <Row className="skills-wrapper">
           <SkillBox
@@ -303,8 +305,7 @@ const IndexPage = ({ scrollPosition }) => {
               <div className="more-devs-card">
                 <p>
                   Need more devs?<br></br>
-                  No problem,{" "}
-                  <AnchorLink href="#contact">contact us!</AnchorLink>
+                  Just <AnchorLink href="#contact">contact us</AnchorLink>!
                 </p>
               </div>
             </div>
