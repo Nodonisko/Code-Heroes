@@ -299,7 +299,7 @@ const IndexPage = ({ scrollPosition }) => {
               scrollPosition={scrollPosition}
             ></Member>
 
-            <div className="member member--more col-lg-4 col-md-6">
+            <div className="member member--more col-lg-4 col-sm-6">
               <div className="member__inner">
                 <p className="member__desc">
                   Need more devs?<br></br>

@@ -18,7 +18,7 @@ const Member = ({
   }
 
   return (
-    <div className="member col-lg-4 col-md-6">
+    <div className="member col-lg-4 col-sm-6">
       <div className="member__content">
         <FlipCard
           ref={cardRef}
