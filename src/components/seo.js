@@ -11,6 +11,9 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import FBThumbnail from "../images/fb-thumbnail.png"
 
+const isDev = process.env.NODE_ENV === "development"
+const siteUrl = "https://codehero.es"
+
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -54,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: FBThumbnail,
+          content: `${isDev ? "" : siteUrl}${FBThumbnail}`,
         },
         {
           name: `twitter:card`,
@@ -74,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: FBThumbnail,
+          content: `${isDev ? "" : siteUrl}${FBThumbnail}`,
         },
       ].concat(meta)}
     />
