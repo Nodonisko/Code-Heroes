@@ -1,15 +1,38 @@
-$enable-responsive-font-sizes: true;
+// use px variables with rfs mixins for the best results
 
 // text
-$title-font-stack: 'Raleway', serif;
-$font-stack: 'PT Sans', sans-serif;
-$base-line-height: 1.17;
-$large-line-height: 1.5;
-$base-font-size: 18;
-$title-font-size: 60;
-$title-name-font-size: 80;
-$p-font-size: 20;
-$large-font-size: 30;
+$title: 'Raleway', serif;
+$body: 'PT Sans', sans-serif;
+$base-lh: 1.17;
+$large-lh: 1.5;
+$base-fs: 18px;
+$title-fs: 60px;
+$large-title-fs: 80px;
+$p-fs: 20px;
+$large-fs: 30px;
+
+// spacings
+$xl-s: 120px;
+$lg-s: 60px;
+$md-s: 30px;
+$sm-s: 15px;
+$xs-s: 10px;
+$section-s: $xl-s;
+$small-section-s: $lg-s;
+$title-s: $md-s;
+$medium-title-s: $lg-s;
+$large-title-s: $xl-s;
+$p-s: $sm-s;
+$skills-s: 5rem; // 80px
+$top-skills-s: 4rem; // 64px
+$large-member-s: 45px;
+$member-s: 20px;
+
+// other
+$avatar: 10.6rem; // 170px
+$member-dot: 20px;
+$link-icon: 15px;
+$hitslop: 5.625rem; // 90px
 
 // banner hire us
 $banner-height: 50px;

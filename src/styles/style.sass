@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Raleway:700,900&display=swap&subset=latin-ext')
 @import ../../node_modules/bootstrap/scss/bootstrap-grid.scss
 @import ../../node_modules/bootstrap/scss/bootstrap-reboot.scss
+@import ../../node_modules/rfs/sass
 
 @import 'colors'
 @import 'metrics'
@@ -10,64 +11,56 @@
 @import '404'
 
 body
-  @include color-assign(color, font-dark)
-  @include color-assign(background-color, background)
-  @include rfs($base-font-size)
-  font-family: $font-stack
-  line-height: $base-line-height
+  +color-assign(color, font-dark)
+  +color-assign(background-color, background)
+  +font-size($base-fs)
+  font-family: $body
+  line-height: $base-lh
 
 h1, h2, h3, h4, h5, h6
-  @include color-assign(color, primary)
-  font-family: $title-font-stack
+  +color-assign(color, primary)
+  font-family: $title
   font-weight: 900
+  margin-bottom: 0
 
 h1, h2
-  @include rfs($title-font-size)
-  margin-bottom: 30px
+  +font-size($large-title-fs)
+  +margin-bottom($medium-title-s)
 
 p
-  @include rfs($p-font-size)
-  font-family: $font-stack
-  line-height: $large-line-height
-  margin: 15px 0
+  +font-size($p-fs)
+  +margin-bottom($p-s)
+  +margin-top($p-s)
+  font-family: $body
+  line-height: $large-lh
 
 a
-  @include color-assign(color, secondary)
+  +color-assign(color, secondary)
   text-decoration: underline
 
   &:hover
-    @include color-assign(color, secondary)
+    +color-assign(color, secondary)
     text-decoration: none
 
 .container
-  max-width: 960px
+  max-width: 60rem
 
 .section
-  @include color-assign(border-bottom, section-border, '3px solid here')
-  padding: 100px 0
+  +color-assign(border-bottom, section-border, '3px solid here')
+  +padding-bottom($section-s)
+  +padding-top($section-s)
 
   &.no-border
     border-bottom: 0
 
 .secondary-color
-  @include color-assign(color, secondary)
-
-.link-button
-  @include color-assign(color, secondary)
-  @include rfs($large-font-size)
-  display: inline-block
-  font-family: $title-font-stack
-  line-height: $large-line-height
-  margin-top: 25px
-  text-decoration: underline
+  +color-assign(color, secondary)
 
 // intro section
 .intro
   background: $hero-background
+  min-height: 100vh
   position: relative
-
-  @include media-breakpoint-up(md)
-    min-height: 100vh
 
   .section
     padding-top: 0
@@ -76,17 +69,16 @@ a
     position: relative
 
   &__banner
-    @include color-assign(background-color, secondary)
-    @include color-assign(color, font-light-strong)
-    @include rfs($p-font-size)
+    +color-assign(background-color, secondary)
+    +color-assign(color, font-light-strong)
+    +font-size($p-fs)
+    +padding-top($offset)
     align-items: center
-    font-family: $title-font-stack
-    font-weight: 900
     display: flex
+    font-family: $title
     height: $banner-height
     justify-content: center
     left: 0
-    padding-top: $offset
     position: relative
     text-decoration: none
     top: -2 * $offset
@@ -94,12 +86,12 @@ a
     width: $banner-width
 
     &:hover
-      @include color-assign(color, font-light-strong)
+      +color-assign(color, font-light-strong)
       top: -$offset
       transition: all 0.2s ease
 
     &::after
-      @include color-assign(border-top, secondary)
+      +color-assign(border-top, secondary)
       border-left: $banner-width / 2 solid transparent
       border-right: $banner-width / 2 solid transparent
       border-top-style: solid
@@ -112,15 +104,18 @@ a
       width: 0
 
   &__title
-    @include color-assign(color, font-light-strong)
+    +color-assign(color, font-light-strong)
+    +font-size($title-fs)
+    +padding-bottom($title-s)
+    +padding-top($large-title-s)
     font-weight: 700
-    margin: 120px 0 60px
+    margin-bottom: 0
 
     &-name
-      @include rfs($title-name-font-size)
+      +font-size($large-title-fs)
+      +margin-top($xs-s)
       display: block
       font-weight: 900
-      margin-top: 10px
 
     &-shield
       color: transparent
@@ -128,46 +123,47 @@ a
       background-size: auto 100%
       padding: 0 0.1%
 
-      @include media-breakpoint-down(xs)
+      +media-breakpoint-down(xs)
         padding: 0 0.2%
 
   &__description
-    p
-      @include color-assign(color, font-light)
-      @include rfs($large-font-size)
-
-    strong
-      @include color-assign(color, font-light-strong)
+      +color-assign(color, font-light)
+      +font-size($large-fs)
 
   &__arrow
+    +padding-bottom($small-section-s)
     bottom: 0
-    padding-bottom: 65px
     position: absolute
     text-align: center
-    transition: all 0.2s ease
     transform: scale(1)
+    transition: all 0.2s ease
     width: 100%
 
     &:hover
       transform: translateY(20px)
       transition: all 0.2s ease
 
-    a
-      padding: 50px
+    &-link
+      +padding($small-section-s)
 
 // skills section
 .skills-wrapper
+  +margin-top($md-s)
+
   div[class^="col-"]
     display: flex
-    padding-top: 80px
+    padding-top: $skills-s
 
 .skill-box
-  @include color-assign(background, member-background)
+  +color-assign(background, member-background)
+  +padding-bottom($md-s)
+  +padding-left($md-s)
+  +padding-right($md-s)
   align-items: center
   display: flex
   flex-direction: column
   flex-grow: 1
-  padding: 60px 30px 30px
+  padding-top: $top-skills-s
   position: relative
 
   &__icon
@@ -177,42 +173,47 @@ a
     transform: translateX(-50%) translateY(-50%)
 
   &__title
-    @include color-assign(color, secondary)
-    @include rfs($large-font-size)
+    +color-assign(color, secondary)
+    +font-size($large-fs)
 
   &__content
-    @include color-assign(color, font-dark)
-    @include rfs($base-font-size)
+    +color-assign(color, font-dark)
+    +font-size($base-fs)
     margin-bottom: 0
-    line-height: $base-line-height
+    line-height: $base-lh
     text-align: center
+
+  &__smile 
+    position: relative
+    top: -2px
+    left: -2px
 
 // clients section
 .client-logo
+  +margin-top($lg-s)
   text-align: center
-  margin-top: 60px
 
 // contact section    
 .contact
-  @include color-assign(background, member-background)
-  @include color-assign(color, font-dark)
+  +color-assign(background, member-background)
+  +color-assign(color, font-dark)
 
-  .hire-button
+  &__hire
+    +color-assign(color, secondary)
+    +font-size($large-fs)
+    +margin-bottom($xs-s)
+    +margin-top($md-s)
     display: inline-block
-    margin: 35px 0 10px
+    font-family: $title
+    line-height: $large-lh
+    text-decoration: underline
 
-.footer-left
-  padding-top: 3px
+// footer section 
+.footer
+  +color-assign(border-top, member-border, '3px solid here')
+  +padding-bottom($md-s)
+  +padding-top($md-s)
 
-  a
-    @include color-assign(color, font-dark)
+  &__link
+    +color-assign(color, font-dark)
     text-decoration: none
-
-.footer-copy
-  @include color-assign(border-top, member-border, '3px solid here')
-  padding: 20px 0
-
-.smile 
-  position: relative
-  top: -2px
-  left: -2px

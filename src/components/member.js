@@ -18,27 +18,26 @@ const Member = ({
   }
 
   return (
-    <div className="col-md-4 col-sm-6">
-      <div style={{ position: "relative" }}>
+    <div className="member col-lg-4 col-md-6">
+      <div className="member__content">
         <FlipCard
           ref={cardRef}
           FrontSide={() => (
-            <div className="member member-frontside">
-              <div className="member-avatar-container">
-                <div className="member-avatar">
-                  <Image
-                    src={avatar}
-                    alt={name}
-                    scrollPosition={scrollPosition}
-                  />
-                </div>
+            <div className="member__inner">
+              <div className="member__avatar">
+                <Image
+                  className="member__avatar-img"
+                  src={avatar}
+                  alt={name}
+                  scrollPosition={scrollPosition}
+                />
               </div>
-              <h3>{name}</h3>
-              <div className="member-desc">
-                {masterSkill} <br></br>
-                {secondarySkill}
+              <h3 className="member__name">{name}</h3>
+              <div className="member__desc">
+                <span className="member__desc-skill">{masterSkill}</span>
+                <span className="member__desc-skill">{secondarySkill}</span>
               </div>
-              <div className="flip-arrow" role="button" onClick={toggle}>
+              <div className="member__flip-arrow" role="button" onClick={toggle}>
                 <Image
                   src={require("../images/arrow-right.svg")}
                   alt="Flip card"
@@ -47,25 +46,25 @@ const Member = ({
             </div>
           )}
           BackSide={() => (
-            <div className="member member-backside">
-              <h3>{name}</h3>
+            <div className="member__inner member__inner--back">
+              <h3 className="member__name">{name}</h3>
               {skills && (
-                <div className="member-desc">
-                  <ul>
+                <div className="member__desc">
+                  <ul className="member__desc-list">
                     {skills.map((skill) => (
-                      <li key={skill}>{skill}</li>
+                      <li className="member__desc-list-item" key={skill}>{skill}</li>
                     ))}
                   </ul>
                 </div>
               )}
-              <div className="member-links">
+              <div className="member__links">
                 {links.map(({ href, title }) => (
-                  <a key={title} href={href} target="_blank">
+                  <a className="member__link" key={title} href={href} target="_blank">
                     {title}
                   </a>
                 ))}
               </div>
-              <div className="flip-arrow" role="button" onClick={toggle}>
+              <div className="member__flip-arrow" role="button" onClick={toggle}>
                 <Image
                   src={require("../images/arrow-left.svg")}
                   alt="Flip card"
@@ -74,7 +73,7 @@ const Member = ({
             </div>
           )}
         />
-        <div className="flip-hitslop" role="button" onClick={toggle}></div>
+        <div className="member__flip-hitslop" role="button" onClick={toggle}></div>
       </div>
     </div>
   )

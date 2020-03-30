@@ -24,7 +24,11 @@ const IndexPage = ({ scrollPosition }) => {
         <Stars />
         <Section noBorder>
           <div className="intro__column">
-            <AnchorLink href="#contact" class="intro__banner">
+            <AnchorLink
+              href="#contact"
+              class="intro__banner"
+              alt="Hire Code Heroes"
+            >
               Hire us
             </AnchorLink>
             <h1 className="intro__title">
@@ -34,27 +38,25 @@ const IndexPage = ({ scrollPosition }) => {
               </span>
             </h1>
           </div>
-          <div className="intro__description">
-            <p>
-              <strong>
-                A team of Javascript developers with web&nbsp;&&nbsp;mobile in
-                our DNA.
-              </strong>
-              <br />
-              Hire us and we will transform your ideas into reality.
-            </p>
-          </div>
+          <p className="intro__description">
+            <strong>
+              A team of Javascript developers with web&nbsp;&&nbsp;mobile in
+              our DNA.
+            </strong>
+            <br />
+            Hire us and we will transform your ideas into reality.
+          </p>
         </Section>
-        <div className="intro__arrow d-none d-md-block">
+        <div className="intro__arrow">
           <AnchorLink
             href="#skills"
             onClick={createGAEventHandler("Clicked intro scroll arrow")}
-            className="intro-arrow"
+            className="intro__arrow-link"
           >
             <Image
               src={require("../images/arrow-down-big.svg")}
               alt="Read more"
-              className="beat"
+              className="intro__arrow-img"
             />
           </AnchorLink>
         </div>
@@ -118,7 +120,7 @@ const IndexPage = ({ scrollPosition }) => {
                 Git, TypeScript, Redux,
                 <br />
                 Heroes of Might and Magic 3{" "}
-                <span className="smile">
+                <span className="skill-box__smile">
                   <Image
                     src={require("../images/smile.svg")}
                     width="13"
@@ -198,17 +200,13 @@ const IndexPage = ({ scrollPosition }) => {
       </Section>
 
       <Section id="members">
-        <Row>
-          <div className="col-12">
-            <h2 className="team-members-title">Team members</h2>
-            <p>
-              We are four senior developers. Radek is our Project Manager and
-              Quality Engineer. In case you need more engineering power, feel
-              free to ask for options.
-            </p>
-          </div>
-        </Row>
-        <div className="members-cards">
+        <h2>Team members</h2>
+        <p>
+          We are four senior developers. Radek is our Project Manager and
+          Quality Engineer. In case you need more engineering power, feel
+          free to ask for options.
+        </p>
+        <div className="members">
           <Row>
             <Member
               name="Jan Václavík"
@@ -301,9 +299,9 @@ const IndexPage = ({ scrollPosition }) => {
               scrollPosition={scrollPosition}
             ></Member>
 
-            <div className="col-md-4 col-sm-6">
-              <div className="more-devs-card">
-                <p>
+            <div className="member member--more col-lg-4 col-md-6">
+              <div className="member__inner">
+                <p className="member__desc">
                   Need more devs?<br></br>
                   Just <AnchorLink href="#contact">contact us</AnchorLink>!
                 </p>
@@ -314,35 +312,25 @@ const IndexPage = ({ scrollPosition }) => {
       </Section>
       <footer className="contact" id="contact">
         <Section noBorder>
-          <Row>
-            <div className="col-12">
-              <h2>Contact</h2>
-              <p>
-                We are based in Prague, Czech Republic – but the internet is our
-                second home and{" "}
-                <strong>we cooperate remotely without problem</strong>.
-              </p>
-              <p>Are you interested? Drop us a line:</p>
-              <a
-                href="mailto:hire@codehero.es"
-                className="link-button hire-button"
-                onClick={createGAEventHandler("Clicked email in Contact")}
-              >
-                hire@codehero.es
-              </a>
-            </div>
-          </Row>
+          <h2>Contact</h2>
+          <p>
+            We are based in Prague, Czech Republic – but the internet is our
+            second home and{" "}
+            <strong>we cooperate remotely without problem</strong>.
+          </p>
+          <p>Are you interested? Drop us a line:</p>
+          <a
+            href="mailto:hire@codehero.es"
+            className="contact__hire"
+            onClick={createGAEventHandler("Clicked email in Contact")}
+          >
+            hire@codehero.es
+          </a>
         </Section>
-        <Section className="footer-copy">
-          <Row>
-            <div className="col-12">
-              <div className="footer-left">
-                <a href="https://github.com/Nodonisko/Code-Heroes">
-                  Coded with 😷 during quarantine 2020
-                </a>
-              </div>
-            </div>
-          </Row>
+        <Section className="footer">
+          <a className="footer__link" href="https://github.com/Nodonisko/Code-Heroes">
+            Coded with 😷 during quarantine 2020
+          </a>
         </Section>
       </footer>
     </Layout>

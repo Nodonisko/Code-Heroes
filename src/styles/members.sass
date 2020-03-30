@@ -1,117 +1,117 @@
 // team section
-.team-members-title 
-  margin: 45px 0 36px
-
-.members-cards
-  margin-top: 10px
-
-  div[class^="col-"]
-    padding-top: 30px
-
-
-$card-bottom-margin: 30px
-
-.flip-hitslop
-  position: absolute
-  right: 0
-  bottom: 0
-  height: 90px
-  width: 90px
-  background: transparent
-  cursor: pointer
+.members
+  +margin-top($xs-s)
 
 .member
-    @include color-assign(background, member-background)
-    padding: 23px
+  +padding-top($md-s)
+
+  &__content
+    position: "relative"
+
+  &__inner
+    +color-assign(background, member-background)
+    +padding-bottom($md-s)
+    +padding-left($member-s)
+    +padding-right($member-s)
+    +padding-top($large-member-s)
     display: flex
     flex-direction: column
-    height: 100%
+    height: 100%   
 
-    .member-avatar
-      text-align: center
-      margin: 22px 0 45px
+  &__inner--back
+    +color-assign(background, member-backside-background)
+    display: flex
+    
+    .member__name,
+    .member__desc
+      text-align: left
 
-      @include media-breakpoint-down(md)
-        margin: 10px 0 25px
+    .member__desc
+      flex-grow: 1
 
-      img
-        object-fit: cover
-        width: 170px
-        height: 170px
-        border-radius: 85px
-        @include color-assign(border, member-border, '7px solid here')
+    .member__links
+      +margin-bottom($md-s)
 
-    .flip-arrow
-      align-self: flex-end
-      margin-top: auto
-      cursor: pointer
+  &__avatar
+    +margin-bottom($large-member-s)
+    text-align: center
 
-    h3
-      @include color-assign(color, secondary)
-      @include rfs($large-font-size)
-      margin-top: 0
-      text-align: center
+    &-img
+      +color-assign(border, member-border, '7px solid here')
+      border-radius: 50%
+      height: $avatar
+      object-fit: cover
+      width: $avatar
 
-    .member-desc
-      @include color-assign(color, font-dark)
-      @include rfs($base-font-size)
-      margin: 20px 0
-      text-align: center
+  &__name
+    +color-assign(color, secondary)
+    +font-size($large-fs)
+    margin-top: 0
+    text-align: center
 
-    ul
-      margin: 0
-      padding-left: 20px
+  &__desc
+    +color-assign(color, font-dark)
+    +font-size($base-fs)
+    +margin-bottom($member-s)
+    +margin-top($member-s)
+    display: flex
+    flex-direction: column
+    line-height: $large-lh
+    text-align: center
+
+    &-list
+      +padding-left($member-s)
       list-style: none
+      margin: 0
 
-      li
-        @include color-assign(color, font-dark)
-        margin-bottom: 7px
+      &-item
+        +color-assign(color, font-dark)
+        +margin-bottom($xs-s)
 
-      li::before 
-        content: "\2022"
-        @include color-assign(color, member-border)
-        font-weight: bold
-        display: inline-block
-        width: 20px
-        margin-left: -20px
-
-    &.member-backside
-      @include color-assign(background, member-backside-background)
-
-      h3
-        text-align: left
-
-      .member-desc
-        text-align: left
-
-      .member-links
-        margin-top: auto
-
-        a
-          display: block
-          margin-bottom: 7px
+        &::before 
+          +color-assign(color, member-border)
+          +rfs($member-dot, width)
+          +margin-left(-$member-dot)
+          content: "\2022"
+          display: inline-block
           font-weight: bold
 
-          &::after
-            content: ""
-            height: 15px
-            width: 15px
-            display: inline-block
-            margin-left: 7px
-            background: url('../images/link.svg') center right no-repeat
-            background-size: auto 100%
+  &__flip-arrow
+    align-self: flex-end
+    margin-top: auto
+    cursor: pointer
 
-.more-devs-card
-  height: 100%
-  padding: 23px
-  @include color-assign(background, more-devs-background)
-  display: flex
-  flex-direction: column
-  justify-content: center
-  text-align: center
+  &__link
+    +margin-bottom($xs-s)
+    display: block
+    font-weight: bold
 
-  p
+    &::after
+      +margin-left($xs-s)
+      +rfs($link-icon, height)
+      +rfs($link-icon, width)
+      background: url('../images/link.svg') center right no-repeat
+      background-size: auto 100%
+      content: ""
+      display: inline-block
+
+  &__flip-hitslop
+    background: transparent
+    bottom: 0
+    cursor: pointer
+    height: $hitslop
+    position: absolute
+    right: 0
+    width: $hitslop
+
+.member--more
+  .member__inner
+    +color-assign(background, more-devs-background)
+    justify-content: center
+
+  .member__desc
     color: #757575
+    display: block
 
   a
     font-weight: bold
@@ -123,7 +123,7 @@ $card-bottom-margin: 30px
   height: 487px
   perspective: 1000px
 
-  @include media-breakpoint-down(sm)
+  +media-breakpoint-down(sm)
     height: 430px
 
   .flip-card-inner

@@ -1,6 +1,6 @@
 
 .page-404
-  @include color-assign(background, primary)
+  +color-assign(background, primary)
   min-height: 100vh
   display: flex
   flex-direction: column
@@ -28,11 +28,11 @@
     lottie-player
       width: 250px
 
-      @include media-breakpoint-down(md)
+      +media-breakpoint-down(md)
         width: 200px
 
-      @include media-breakpoint-down(sm)
+      +media-breakpoint-down(sm)
         width: 150px
 
-      @include media-breakpoint-down(xs)
+      +media-breakpoint-down(xs)
         width: 100px
