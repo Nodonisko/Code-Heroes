@@ -37,10 +37,11 @@ const IndexPage = ({ scrollPosition }) => {
           <div className="intro__description">
             <p>
               <strong>
-                A team of javascript developers with web&nbsp;&&nbsp;mobile in our DNA.
+                A team of Javascript developers with web&nbsp;&&nbsp;mobile in
+                our DNA.
               </strong>
               <br />
-              Hire us and make your next product successful!
+              Hire us and we will transform your ideas into the reality!
             </p>
           </div>
         </Section>
@@ -61,13 +62,12 @@ const IndexPage = ({ scrollPosition }) => {
       <Section id="skills">
         <h2>We speak JavaScript</h2>
         <p>
-          During the years we have gained a lot of experience at number of
-          companies. And now our dream finally came true – we are looking for
-          new challenges together. Everyone on the team is an expert in their
-          field, but we are still eager to learn something new every day. Our{" "}
-          <strong>secret power</strong> lies in the combination of both – hard
-          skills and soft skills. This way we can offer a real difference to our
-          customers.
+          Our dream finally came true – we are looking for new challenges
+          together as a team, not as individuals. We have gained a lot of
+          experience during our careers and everyone on the team is an expert in
+          his field. Our <strong>secret power</strong> lies in the combination
+          of both – hard skills and soft skills. This way we can offer a real
+          difference to our customers.
         </p>
         <p>
           We develop complex apps for{" "}
@@ -75,12 +75,12 @@ const IndexPage = ({ scrollPosition }) => {
           project from scratch – robust architecture, suitable tech stack and
           reliable CI/CD is all an essence of what we do. You may be assured
           that analysis, user experience, and testing are always our main focus.
-          We promise.
         </p>
         <p>
-          Languages of our choice are TypeScript, JavaScript and English. Our
-          favorite tech stack utilizes React, React Native, GraphQL and NodeJS.
-          We also give talks and workshops on advanced topics.
+          Languages of our choice are <strong>TypeScript</strong>, JavaScript
+          and English. Our favorite tech stack utilizes React, React Native,
+          GraphQL and NodeJS. We also give talks and workshops on advanced
+          topics.
         </p>
         <Row className="skills-wrapper">
           <SkillBox
@@ -111,7 +111,20 @@ const IndexPage = ({ scrollPosition }) => {
           <SkillBox
             icon="other-skills"
             title="Other skills"
-            content="Git, TypeScript, Redux"
+            content={
+              <>
+                Git, TypeScript, Redux,
+                <br />
+                Heroes of Might and Magic 3{" "}
+                <span className="smile">
+                  <Image
+                    src={require("../images/smile.svg")}
+                    width="13"
+                    height="13"
+                  />
+                </span>
+              </>
+            }
           />
         </Row>
       </Section>
@@ -306,7 +319,8 @@ const IndexPage = ({ scrollPosition }) => {
               <h2>Contact</h2>
               <p>
                 We are based in Prague, Czech Republic – but the internet is our
-                second home and remote cooperation is possible.
+                second home and{" "}
+                <strong>we cooperate remotely without problem</strong>.
               </p>
               <p>Are you interested? Drop us a line:</p>
               <a
