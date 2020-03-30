@@ -41,7 +41,7 @@ const IndexPage = ({ scrollPosition }) => {
                 our DNA.
               </strong>
               <br />
-              Hire us and we will transform your ideas into the reality!
+              Hire us and we will transform your ideas into reality.
             </p>
           </div>
         </Section>
@@ -74,13 +74,13 @@ const IndexPage = ({ scrollPosition }) => {
           <strong>web, mobile or multi-platform</strong>. Let us deliver your
           project from scratch – robust architecture, suitable tech stack and
           reliable CI/CD is all an essence of what we do. You may be assured
-          that analysis, user experience, and testing are always our main focus.
+          that analysis, user experience, and testing are always our main focus
+          and we want to build products which we can be proud of.
         </p>
         <p>
-          Languages of our choice are <strong>TypeScript</strong>, JavaScript
-          and English. Our favorite tech stack utilizes React, React Native,
-          GraphQL and NodeJS. We also give talks and workshops on advanced
-          topics.
+          Languages of our choice are <strong>TypeScript</strong> JavaScript and
+          English. Our favorite tech stack utilizes React, React Native, GraphQL
+          and NodeJS. We also give talks and workshops on advanced topics.
         </p>
         <Row className="skills-wrapper">
           <SkillBox
@@ -133,9 +133,8 @@ const IndexPage = ({ scrollPosition }) => {
         <p>
           As individuals or together, we have worked for many companies solving
           different problems. From small startups to large corporate
-          environments, we learned valuable lessons. Given that communication is
-          our most important skill and we believe our shared knowledge will
-          amaze you.
+          environments, we learned valuable lessons and we are still eager to
+          learn something new every day.
         </p>
 
         <Row className="align-items-center">
