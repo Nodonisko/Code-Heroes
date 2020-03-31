@@ -314,7 +314,7 @@ const IndexPage = ({ scrollPosition }) => {
         <Section noBorder>
           <h2>Contact</h2>
           <p>With our headquarters based in Prague in Czech Republic, we welcome both <strong>local and remote clients</strong> alike.<br />
-          Whatever your location, make sure to drop us a line at</p>
+          Whatever your location, make sure to drop us a line:</p>
           <a
             href="mailto:hello@codehero.es"
             className="contact__hire"
