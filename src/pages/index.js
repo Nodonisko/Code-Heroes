@@ -47,7 +47,7 @@ const IndexPage = ({ scrollPosition }) => {
         </Section>
         <div className="intro__arrow d-none d-md-block">
           <AnchorLink
-            href="#skills"
+            href="#js-experts"
             onClick={createGAEventHandler("Clicked intro scroll arrow")}
             className="intro-arrow"
           >
@@ -59,30 +59,22 @@ const IndexPage = ({ scrollPosition }) => {
           </AnchorLink>
         </div>
       </div>
+      <Section id="js-experts">
+        <h2>We are Javascript experts</h2>
+        <p>
+          Through our extensive experience and thirst for expanding our skills,
+          we can offer a service to our customers that makes a real difference.
+          Our secret power? We combine both hard and soft skills to deliver the
+          results you expect.
+        </p>
+      </Section>
       <Section id="skills">
-        <h2>We speak JavaScript</h2>
+        <h2>What we do</h2>
         <p>
-          Working together as a team, we realized that we can be more effective,
-          and achieve incredible results for our clients. So instead of working
-          alone, we’re looking for new challenges together. We have gained a lot
-          of experience during our careers and every member of our team is an
-          expert in their respective field. Our <strong>secret power</strong>{" "}
-          lies in the combination of both – hard skills and soft skills. This
-          way we can offer a real difference to our customers.
-        </p>
-        <p>
-          We develop complex apps for{" "}
-          <strong>web, mobile or multi-platform</strong>. Let us deliver your
-          project from scratch – robust architecture, suitable tech stack and
-          reliable CI/CD is an integral part what we do. You may be assured that
-          analysis, user experience, and testing are always our main focus and
-          we want to build products which we can be proud of.
-        </p>
-        <p>
-          Our languages of choice are <strong>TypeScript</strong>, JavaScript
-          and English. Our favorite tech stack utilizes React, React Native,
-          GraphQL and NodeJS. We also give talks and workshops on advanced
-          topics.
+          We develop complex <strong>web, mobile & multi-platform apps</strong>{" "}
+          from scratch. While combining robust architecture, suitable tech stack
+          and reliable CI/CD we also guarantee exceptional analysis, user
+          experience and thorough testing.
         </p>
         <Row className="skills-wrapper">
           <SkillBox
@@ -133,10 +125,9 @@ const IndexPage = ({ scrollPosition }) => {
       <Section id="experience">
         <h2>Work experience</h2>
         <p>
-          As individuals or together, we have worked for many companies solving
-          different problems. From small startups to large corporate
-          environments, we learned valuable lessons and we are still eager to
-          learn something new every day.
+          We are proud to have worked with a variety of small start-ups and
+          well-known brands, and we are excited to use that experience to
+          deliver high quality development for our clients.
         </p>
 
         <Row className="align-items-center">
@@ -202,9 +193,10 @@ const IndexPage = ({ scrollPosition }) => {
           <div className="col-12">
             <h2 className="team-members-title">Team members</h2>
             <p>
-              We are four senior developers. Radek is our Project Manager and
-              Quality Engineer. In case you need more engineering power, feel
-              free to ask for options.
+              Our team currently consists of four senior developers and our
+              project manager Radek, who will be guiding you through every step
+              of the project journey. Need more manpower? With our extensive
+              network, we can scale our team to suit your needs!
             </p>
           </div>
         </Row>
@@ -318,17 +310,16 @@ const IndexPage = ({ scrollPosition }) => {
             <div className="col-12">
               <h2>Contact</h2>
               <p>
-                We are based in Prague, Czech Republic – but the internet is our
-                second home and{" "}
-                <strong>we cooperate remotely without problem</strong>.
+                With our headquarters based in Prague in Czech Republic, we
+                welcome both local and remote clients alike. Whatever your
+                location, make sure to drop us a line at:
               </p>
-              <p>Are you interested? Drop us a line:</p>
               <a
-                href="mailto:hire@codehero.es"
+                href="mailto:hello@codehero.es"
                 className="link-button hire-button"
                 onClick={createGAEventHandler("Clicked email in Contact")}
               >
-                hire@codehero.es
+                hello@codehero.es
               </a>
             </div>
           </Row>
