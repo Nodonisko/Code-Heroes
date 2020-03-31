@@ -313,18 +313,14 @@ const IndexPage = ({ scrollPosition }) => {
       <footer className="contact" id="contact">
         <Section noBorder>
           <h2>Contact</h2>
-          <p>
-            We are based in Prague, Czech Republic – but the internet is our
-            second home and{" "}
-            <strong>we cooperate remotely without problem</strong>.
-          </p>
-          <p>Are you interested? Drop us a line:</p>
+          <p>With our headquarters based in Prague in Czech Republic, we welcome both <strong>local and remote clients</strong> alike.<br />
+          Whatever your location, make sure to drop us a line at</p>
           <a
-            href="mailto:hire@codehero.es"
+            href="mailto:hello@codehero.es"
             className="contact__hire"
             onClick={createGAEventHandler("Clicked email in Contact")}
           >
-            hire@codehero.es
+            hello@codehero.es
           </a>
         </Section>
         <Section className="footer">
