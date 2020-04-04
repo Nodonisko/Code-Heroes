@@ -288,7 +288,7 @@ const IndexPage = ({ scrollPosition }) => {
             <Member
               name="Anna Luláková"
               avatar={require("../images/avatars/anicka.jpg")}
-              masterSkill="UI, UX and styling"
+              masterSkill="Dev, UI &amp; styling"
               secondarySkill="React, React Native"
               skills={[
                 "Worked at NCR, U.plus, Accenture",
