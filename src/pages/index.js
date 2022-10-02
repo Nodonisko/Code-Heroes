@@ -285,20 +285,6 @@ const IndexPage = ({ scrollPosition }) => {
               scrollPosition={scrollPosition}
             ></Member>
 
-            <Member
-              name="Anna Luláková"
-              avatar={require("../images/avatars/anicka.jpg")}
-              masterSkill="Dev, UI &amp; styling"
-              secondarySkill="React, React Native"
-              skills={[
-                "Worked at NCR, U.plus, Accenture",
-                "6 years of experience",
-                "Graphical thinking, experience with testing",
-              ]}
-              links={[{ href: "/CV_Lulakova.pdf", title: "Curriculum vitæ" }]}
-              scrollPosition={scrollPosition}
-            ></Member>
-
             <div className="member member--more col-lg-4 col-sm-6">
               <div className="member__inner">
                 <p className="member__desc">
