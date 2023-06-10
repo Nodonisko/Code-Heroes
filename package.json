@@ -8,7 +8,7 @@
     "@lottiefiles/lottie-player": "^0.4.0",
     "bootstrap": "^4.4.1",
     "firebase-tools": "^7.15.1",
-    "gatsby": "^2.19.45",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-hotjar": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.48",
